@@ -3,164 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Get Your Free Design & Marketing Quote</title>
+    <title>Contact Us | Kim Graphics Company Nairobi</title>
+    <meta name="description" content="Ready to grow? Contact Nairobi's #1 design and marketing agency today. Free consultations and custom quotes.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
     </script>
     <link rel="stylesheet" href="css/style.css">
-    <style>.step-hidden { display: none; }</style>
 </head>
-<body class="bg-light">
-    <!-- 1. COUNTDOWN BANNER -->
-    <div class="countdown-banner sticky top-0 z-[60]">
+<body class="bg-white">
+    <!-- STANDARDIZED COUNTDOWN BANNER -->
+    <div class="promo-banner">
         Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <header class="bg-indigo text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <a href="index.html" class="text-3xl font-bold flex items-center justify-center gap-2">KIM GRAPHICS <span class="text-orange text-xl">♦️</span></a>
+    <!-- STANDARDIZED STICKY HEADER -->
+    <header class="bg-indigo text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 text-white no-underline">
+                KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
+            </a>
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Marketing</a>
+                <a href="portfolio.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Portfolio</a>
+                <a href="blog.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Blog</a>
+                <a href="contact.html" class="btn btn-secondary text-sm">Free Quote →</a>
+            </nav>
+            <button data-menu-toggle class="lg:hidden text-2xl text-white focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
+        <!-- Mobile Menu -->
+        <nav data-mobile-menu class="hidden lg:hidden bg-indigo border-t border-gray-700 px-4 py-6 space-y-4">
+            <a href="graphic-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Graphic Design</a>
+            <a href="web-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Web Design</a>
+            <a href="digital-marketing.html" class="block hover:text-orange transition font-semibold text-white no-underline">Marketing</a>
+            <a href="portfolio.html" class="block hover:text-orange transition font-semibold text-white no-underline">Portfolio</a>
+            <a href="blog.html" class="block hover:text-orange transition font-semibold text-white no-underline">Blog</a>
+            <a href="contact.html" class="btn btn-secondary w-full">Free Quote →</a>
+        </nav>
     </header>
 
-    <section class="py-16">
+
+
+
+
+
+
+
+
+
+    <section class="section-padding bg-light">
         <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+                <!-- Direct Contact Info -->
+                <div class="space-y-12">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-indigo mb-6">Let's Start Your <br><span class="text-orange">Success Story.</span></h1>
+                        <p class="text-xl text-gray-500">We're based in the heart of Nairobi, ready to help you dominate your market.</p>
+                    </div>
 
-                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl border-t-4 border-orange">
-                    <h1 class="text-3xl font-bold mb-2 text-indigo">Let's Get Started</h1>
-                    <p class="text-gray-500 mb-8 italic">Based in Nairobi — Serving clients worldwide.</p>
-
-                    <form id="multi-step-form">
-                        <div id="step-1">
-                            <div class="mb-4">
-                                <label for="name" class="block font-bold mb-1 text-sm">Full Name</label>
-                                <input type="text" id="name" name="name" required class="w-full p-3 border rounded-md outline-none focus:border-orange">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center text-orange text-xl"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Direct Line</p>
+                                <p class="text-xl font-bold text-indigo">+254 715 135 141</p>
                             </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center text-orange text-xl"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">WhatsApp Chat</p>
+                                <p class="text-xl font-bold text-indigo">+254 715 135 141</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center text-orange text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Our Studio</p>
+                                <p class="text-xl font-bold text-indigo">Riverside Drive, Nairobi, KE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAP MOCK -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl h-64 grayscale hover:grayscale-0 transition duration-500">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.364489344445!2d36.7938361!3d-1.2678381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c3997d9fd%3A0xb5a0894e6378e906!2sRiverside%20Dr%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1680000000000!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- MULTI-STEP FORM -->
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100">
+                    <h2 class="text-2xl font-bold text-indigo mb-8">Get a Custom Proposal</h2>
+                    <form id="multi-step-form" class="space-y-6">
+                        <input type="hidden" name="source" value="JulesMultiPage_Contact">
+
+                        <!-- Step 1 -->
+                        <div class="form-step active" id="step-1">
                             <div class="mb-6">
-                                <label for="email" class="block font-bold mb-1 text-sm">Business Email</label>
-                                <input type="email" id="email" name="email" required class="w-full p-3 border rounded-md outline-none focus:border-orange">
+                                <label class="block text-sm font-bold mb-2">Your Name *</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border focus:outline-orange">
                             </div>
-                            <button type="button" onclick="nextStep(2)" class="cta-button w-full">Next: Project Details →</button>
+                            <div class="mb-8">
+                                <label class="block text-sm font-bold mb-2">Business Email *</label>
+                                <input type="email" name="email" required placeholder="john@company.co.ke" class="w-full px-4 py-3 rounded-lg border focus:outline-orange">
+                            </div>
+                            <button type="button" class="next-step btn btn-secondary w-full py-4">Next: Project Details →</button>
                         </div>
 
-                        <div id="step-2" class="step-hidden">
-                            <div class="mb-4">
-                                <label for="service" class="block font-bold mb-1 text-sm">Service Required</label>
-                                <select id="service" name="service" class="w-full p-3 border rounded-md outline-none">
-                                    <option>Graphic Design</option>
-                                    <option>Web Design</option>
-                                    <option>Digital Marketing</option>
-                                    <option>Full Branding & Web Package</option>
+                        <!-- Step 2 -->
+                        <div class="form-step" id="step-2">
+                            <div class="mb-6">
+                                <label class="block text-sm font-bold mb-2">Which service do you need? *</label>
+                                <select name="service" required class="w-full px-4 py-3 rounded-lg border focus:outline-orange">
+                                    <option value="">Select Service</option>
+                                    <option value="graphic">Graphic Design / Branding</option>
+                                    <option value="web">Web Design / E-commerce</option>
+                                    <option value="marketing">Digital Marketing / SEO</option>
                                 </select>
                             </div>
-                            <div class="mb-6">
-                                <label for="hear" class="block font-bold mb-1 text-sm">How did you hear about us?</label>
-                                <select id="hear" name="hear_about" class="w-full p-3 border rounded-md outline-none">
-                                    <option>Google Search</option>
-                                    <option>Facebook / Instagram</option>
-                                    <option>WhatsApp / Referral</option>
-                                    <option>Other</option>
+                            <div class="mb-8">
+                                <label class="block text-sm font-bold mb-2">Estimated Budget (KSh) *</label>
+                                <select name="budget" required class="w-full px-4 py-3 rounded-lg border focus:outline-orange">
+                                    <option value="">Select Budget Range</option>
+                                    <option value="15-50">KSh 15,000 - 50,000</option>
+                                    <option value="50-150">KSh 50,000 - 150,000</option>
+                                    <option value="150+">KSh 150,000+</option>
                                 </select>
                             </div>
                             <div class="flex gap-4">
-                                <button type="button" onclick="nextStep(1)" class="w-1/3 border-2 border-gray-100 py-3 rounded-md font-bold text-sm">Back</button>
-                                <button type="button" onclick="nextStep(3)" class="cta-button w-2/3">Final Step →</button>
+                                <button type="button" class="prev-step btn btn-primary flex-1 py-4">Back</button>
+                                <button type="button" class="next-step btn btn-secondary flex-1 py-4">Next: Final Step →</button>
                             </div>
                         </div>
 
-                        <div id="step-3" class="step-hidden">
-                            <div class="mb-6">
-                                <label for="message" class="block font-bold mb-1 text-sm">Tell us about your project goals</label>
-                                <textarea id="message" name="message" rows="4" class="w-full p-3 border rounded-md outline-none" placeholder="e.g. I need a new website for my real estate business in Nairobi..."></textarea>
-                            </div>
-                            <div class="mb-6 flex items-center gap-3">
-                                <input type="checkbox" id="newsletter" name="newsletter" checked class="accent-orange w-4 h-4">
-                                <label for="newsletter" class="text-sm text-gray-600">Subscribe to design & marketing tips (monthly newsletter)</label>
+                        <!-- Step 3 -->
+                        <div class="form-step" id="step-3">
+                            <div class="mb-8">
+                                <label class="block text-sm font-bold mb-2">Tell us more about your goals *</label>
+                                <textarea name="message" required rows="4" placeholder="I want to increase my sales by..." class="w-full px-4 py-3 rounded-lg border focus:outline-orange"></textarea>
                             </div>
                             <div class="flex gap-4">
-                                <button type="button" onclick="nextStep(2)" class="w-1/3 border-2 border-gray-100 py-3 rounded-md font-bold text-sm">Back</button>
-                                <button type="submit" class="cta-button w-2/3">Submit Quote Request</button>
+                                <button type="button" class="prev-step btn btn-primary flex-1 py-4">Back</button>
+                                <button type="submit" class="btn btn-secondary flex-1 py-4">Submit Proposal →</button>
                             </div>
                         </div>
                     </form>
-                </div>
-
-                <div class="space-y-12">
-                    <div>
-                        <h2 class="text-2xl font-bold mb-6 text-indigo">Visit our Office</h2>
-                        <ul class="space-y-6">
-                            <li class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-indigo text-orange rounded-full flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt"></i></div>
-                                <div>
-                                    <p class="font-bold">Riverside Drive</p>
-                                    <p class="text-sm text-gray-500">Nairobi, Kenya</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-indigo text-orange rounded-full flex items-center justify-center shrink-0"><i class="fas fa-phone"></i></div>
-                                <div>
-                                    <p class="font-bold">+254 715 135 141</p>
-                                    <p class="text-sm text-gray-500">Mon-Fri, 9am - 6pm EAT</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-indigo text-white p-8 rounded-2xl relative overflow-hidden">
-                        <div class="relative z-10">
-                            <h3 class="font-bold text-xl mb-2 text-orange">Fastest Response</h3>
-                            <p class="mb-6 opacity-80 text-sm">Click below to chat with our strategy team instantly on WhatsApp.</p>
-                            <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with:" class="bg-white text-indigo w-full py-4 rounded font-bold block text-center hover:bg-orange hover:text-white transition">Chat Now on WhatsApp</a>
-                        </div>
-                        <i class="fab fa-whatsapp absolute -bottom-10 -right-10 text-9xl opacity-10"></i>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        function nextStep(step) {
-            document.getElementById('step-1').classList.add('step-hidden');
-            document.getElementById('step-2').classList.add('step-hidden');
-            document.getElementById('step-3').classList.add('step-hidden');
-            document.getElementById('step-' + step).classList.remove('step-hidden');
-        }
-    </script>
+    <!-- CALENDLY MOCKUP -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-indigo mb-6">Want to talk now?</h2>
+            <p class="text-gray-500 mb-12">Book a free 15-minute strategy call with our founder.</p>
+            <div class="max-w-4xl mx-auto border-2 border-dashed border-gray-200 rounded-3xl p-8 bg-light">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex items-center gap-4 text-left">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="w-16 h-16 rounded-full object-cover" alt="Founder">
+                        <div>
+                            <p class="font-bold">Kimani K.</p>
+                            <p class="text-sm text-gray-500">Founder & Growth Strategist</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm w-32">
+                            <p class="text-xs text-gray-400">Mon 25</p>
+                            <p class="font-bold text-orange">10:00 AM</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm w-32">
+                            <p class="text-xs text-gray-400">Mon 25</p>
+                            <p class="font-bold text-orange">02:00 PM</p>
+                        </div>
+                    </div>
 
-        <!-- STICKY WHATSAPP -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-indigo text-white pt-20 pb-10 mt-20">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 text-left">
+            <div>
+                <h4 class="text-2xl font-bold mb-6 flex items-center gap-2 text-white">KIM GRAPHICS <span class="text-orange text-lg">♦️</span></h4>
+                <p class="text-gray-400">Kenya's leading growth agency. We build digital assets that work as hard as you do.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Solutions</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="graphic-design.html" class="hover:text-orange transition text-gray-400 no-underline">Logo & Identity</a></li>
+                    <li><a href="web-design.html" class="hover:text-orange transition text-gray-400 no-underline">Custom Web Apps</a></li>
+                    <li><a href="digital-marketing.html" class="hover:text-orange transition text-gray-400 no-underline">Search Engine Optimization</a></li>
+                    <li><a href="portfolio.html" class="hover:text-orange transition text-gray-400 no-underline">Client Success Stories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Company</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="blog.html" class="hover:text-orange transition text-gray-400 no-underline">Latest Growth Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-orange transition text-gray-400 no-underline">Contact Support</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-orange transition text-gray-400 no-underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-orange transition text-gray-400 no-underline">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest text-white">Join Our Growth List</h5>
+                <p class="text-xs text-gray-500 mb-4">Get weekly conversion tips delivered to your inbox.</p>
+                <form class="flex">
+                    <input type="email" required placeholder="email@company.com" class="bg-white bg-opacity-10 border border-gray-700 px-4 py-2 rounded-l-md w-full focus:outline-none text-white text-sm">
+                    <button class="bg-orange px-4 py-2 rounded-r-md hover:bg-opacity-90 transition text-white"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p>© 2025 Kim Graphics Company. All Rights Reserved. Kenyan-Owned.</p>
+            <p>123 Riverside Drive, Nairobi, Kenya | +254 715 135 141</p>
+        </div>
+    </footer>
+
+    <!-- STANDARDIZED STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar lg:hidden">
+        <a href="tel:+254715135141" class="no-underline"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/254715135141" class="no-underline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="contact.html" class="no-underline"><i class="fas fa-envelope"></i> Get Quote</a>
+    </div>
+
+    <!-- STANDARDIZED WHATSAPP FLOAT -->
     <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
-       class="whatsapp-float"
+       class="whatsapp-float hidden md:flex"
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- STICKY CONTACT BAR -->
-    <div class="sticky-contact-bar">
-        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
-        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+
+    <!-- STANDARDIZED SLIDE-IN CTA -->
+    <div class="slide-in-cta">
+        <button class="close-cta absolute top-2 right-2 text-gray-400 hover:text-indigo">&times;</button>
+        <p class="font-bold text-indigo mb-2 text-lg">Need a design today?</p>
+        <p class="text-sm text-gray-500 mb-4">Our Nairobi team is online and ready to chat about your project.</p>
+        <a href="https://wa.me/254715135141" class="btn btn-secondary w-full text-xs py-2">Chat with an Expert</a>
     </div>
-    <!-- STICKY BOTTOM-LEFT CTA -->
-    <div id="sticky-bottom-left">
-        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
-        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
-    </div>
-    <!-- EXIT POPUP -->
-    <div id="exit-popup">
-        <div class="popup-content">
-            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
-            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
-            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+
+    <!-- STANDARDIZED EXIT POPUP -->
+    <div id="exit-popup" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="w-20 h-20 bg-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-3xl">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-indigo">Wait! Don't Leave Empty Handed</h2>
+            <p class="text-gray-600 mb-8">Get <span class="text-orange font-bold">10% OFF</span> your first project and our "Nairobi Growth Guide" instantly.</p>
             <form class="space-y-4">
-                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
-                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+                <input type="email" required placeholder="Your Business Email" class="w-full px-4 py-3 border rounded-lg focus:outline-orange">
+                <button type="submit" class="btn btn-secondary w-full py-4 text-lg">Send My Discount Code</button>
             </form>
-            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+            <p class="text-xs text-gray-400 mt-6 italic">Join 1,000+ business owners scaling with Kim Graphics.</p>
         </div>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

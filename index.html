@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Graphics Company | Premium Agency in Nairobi, Kenya</title>
-    <meta name="description" content="Nairobi's leading graphic design, web design, and digital marketing agency. We turn Kenyan businesses into market leaders with conversion-focused strategy.">
+    <title>Kim Graphics Company | #1 Lead Gen Agency in Nairobi, Kenya</title>
+    <meta name="description" content="Nairobi's premium agency for Graphic Design, Web Design, and Digital Marketing. We don't just create art; we create revenue. Get a free quote today!">
     
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Kim Graphics Company | Premium Kenyan Design Agency">
-    <meta property="og:description" content="Transform your brand with professional graphics, web design, and ROI-focused marketing in Kenya.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&h=630&q=80">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Kim Graphics Company | Conversion-Focused Design & Marketing">
+    <meta property="og:description" content="Helping Kenyan businesses scale with world-class design and data-driven marketing.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://kimgraphics.co.ke">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        indigo: '#1A1A3A',
-                        orange: '#FF6B35',
-                        light: '#F7F7F7'
-                    }
+                    colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Structured Data -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,7 +41,6 @@
         "@type": "PostalAddress",
         "streetAddress": "Riverside Drive",
         "addressLocality": "Nairobi",
-        "addressRegion": "Nairobi",
         "postalCode": "00100",
         "addressCountry": "KE"
       },
@@ -56,234 +51,449 @@
     </script>
 </head>
 <body class="bg-white">
-    <!-- 1. COUNTDOWN BANNER -->
-    <div class="countdown-banner sticky top-0 z-[60]">
+    <!-- STANDARDIZED COUNTDOWN BANNER -->
+    <div class="promo-banner">
         Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <!-- 2. STICKY HEADER -->
-    <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
+    <!-- STANDARDIZED STICKY HEADER -->
+    <header class="bg-indigo text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 text-white no-underline">
                 KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
             </a>
-            <nav class="hidden lg:flex space-x-6 items-center">
-                <a href="graphic-design.html" class="hover:text-orange transition text-sm font-semibold">Graphic Design</a>
-                <a href="web-design.html" class="hover:text-orange transition text-sm font-semibold">Web Design</a>
-                <a href="digital-marketing.html" class="hover:text-orange transition text-sm font-semibold">Marketing</a>
-                <a href="portfolio.html" class="hover:text-orange transition text-sm font-semibold">Portfolio</a>
-                <a href="blog.html" class="hover:text-orange transition text-sm font-semibold">Blog</a>
-                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Marketing</a>
+                <a href="portfolio.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Portfolio</a>
+                <a href="blog.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Blog</a>
+                <a href="contact.html" class="btn btn-secondary text-sm">Free Quote →</a>
             </nav>
-            <button class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            <button data-menu-toggle class="lg:hidden text-2xl text-white focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
+        <!-- Mobile Menu -->
+        <nav data-mobile-menu class="hidden lg:hidden bg-indigo border-t border-gray-700 px-4 py-6 space-y-4">
+            <a href="graphic-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Graphic Design</a>
+            <a href="web-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Web Design</a>
+            <a href="digital-marketing.html" class="block hover:text-orange transition font-semibold text-white no-underline">Marketing</a>
+            <a href="portfolio.html" class="block hover:text-orange transition font-semibold text-white no-underline">Portfolio</a>
+            <a href="blog.html" class="block hover:text-orange transition font-semibold text-white no-underline">Blog</a>
+            <a href="contact.html" class="btn btn-secondary w-full">Free Quote →</a>
+        </nav>
     </header>
 
-    <!-- 3. HERO SECTION -->
+
+
+
+
+
+
+
+    <!-- 1. COUNTDOWN BANNER (Scarcity Trigger) -->
+
+
+    <!-- 2. STICKY HEADER -->
+
+
+    <!-- 3. HERO SECTION (UVP & CTA) -->
     <section class="relative bg-indigo text-white py-24 lg:py-32 overflow-hidden">
         <div class="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=1920&q=80" alt="Nairobi Office" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" alt="Creative Team" class="w-full h-full object-cover">
         </div>
         <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Turn Visitors Into Customers — <br><span class="text-orange">Graphic, Web & Marketing</span> That Sells.</h1>
-            <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-300">Helping Kenyan businesses dominate their markets with world-class design and data-driven marketing strategies.</p>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight">Turn Visitors Into Customers — <br><span class="text-orange">Graphic, Web & Marketing</span> That Sells.</h1>
+            <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-300">Nairobi's premier agency delivering high-performance digital assets that stop the scroll and drive revenue. Stop guessing, start converting.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="contact.html" class="cta-button text-lg px-10 py-4 shadow-xl">Get a Custom Quote (KSh)</a>
-                <a href="case-studies.html" class="bg-white text-indigo px-10 py-4 rounded-md font-bold hover:bg-gray-100 transition">View Our Proof of Work</a>
+                <a href="#lead-form" class="btn btn-secondary text-lg px-10 py-4 shadow-xl">Start Your Project Today →</a>
+                <a href="portfolio.html" class="bg-white text-indigo px-10 py-4 rounded-md font-bold hover:bg-gray-100 transition shadow-lg">View Our Work</a>
             </div>
         </div>
     </section>
 
-    <!-- 4. TRUST BADGES -->
-    <div class="bg-light py-8 border-b">
-        <div class="container mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 text-center">
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-orange"></i>
-                <span class="font-bold text-sm">150+ Kenyan Businesses Served</span>
+    <!-- 4. STATS BAR (Social Proof) -->
+    <div class="bg-orange py-10 text-white">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-bold">200+</p>
+                <p class="text-sm uppercase font-semibold">Projects Completed</p>
             </div>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-star text-orange"></i>
-                <span class="font-bold text-sm">4.9★ Google Rating</span>
+            <div>
+                <p class="text-4xl font-bold">98%</p>
+                <p class="text-sm uppercase font-semibold">Client Retention</p>
             </div>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-shield-alt text-orange"></i>
-                <span class="font-bold text-sm">Member: KEPSA</span>
+            <div>
+                <p class="text-4xl font-bold">50+</p>
+                <p class="text-sm uppercase font-semibold">5-Star Reviews</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold">12hr</p>
+                <p class="text-sm uppercase font-semibold">Avg. Support Response</p>
             </div>
         </div>
     </div>
 
-    <!-- 5. SERVICES PREVIEW -->
-    <section class="section-padding bg-white">
+    <!-- 5. SOCIAL PROOF TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item"><i class="fas fa-certificate text-orange mr-2"></i> Trusted by 150+ Kenyan SMEs</span>
+            <span class="ticker-item"><i class="fas fa-check-circle text-orange mr-2"></i> 100% Satisfaction Guarantee</span>
+            <span class="ticker-item"><i class="fas fa-bolt text-orange mr-2"></i> Fast 48hr Delivery on Basic Tasks</span>
+            <span class="ticker-item"><i class="fas fa-award text-orange mr-2"></i> Top-Rated Nairobi Agency</span>
+            <span class="ticker-item"><i class="fas fa-certificate text-orange mr-2"></i> Trusted by 150+ Kenyan SMEs</span>
+            <span class="ticker-item"><i class="fas fa-check-circle text-orange mr-2"></i> 100% Satisfaction Guarantee</span>
+        </div>
+    </div>
+
+    <!-- 6. SERVICE CARDS -->
+    <section class="section-padding bg-light">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Core Expertises</h2>
-            <div class="w-20 h-1 bg-orange mx-auto mb-16"></div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-indigo">Dominate Your Market</h2>
+            <p class="text-gray-500 mb-16 max-w-2xl mx-auto">We provide the technical and creative horsepower you need to grow your business in Kenya and beyond.</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-10 border rounded-xl hover:shadow-2xl transition text-center bg-white border-gray-100">
-                    <h3 class="text-2xl font-bold mb-4">Graphic Design</h3>
-                    <p class="text-gray-500 mb-6">Starting from <span class="text-orange font-bold text-xl">KSh 8,000</span></p>
-                    <a href="graphic-design.html" class="text-indigo font-bold hover:text-orange">Request Quote →</a>
+                <div class="card p-10">
+                    <div class="text-orange text-5xl mb-6"><i class="fas fa-bezier-curve"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo">Graphic Design</h3>
+                    <p class="text-gray-600 mb-6">Logos, branding, and social media assets that demand attention.</p>
+                    <a href="graphic-design.html" class="text-orange font-bold hover:underline">Explore Graphics →</a>
                 </div>
-                <div class="p-10 border rounded-xl hover:shadow-2xl transition text-center bg-white border-gray-100">
-                    <h3 class="text-2xl font-bold mb-4">Web Design</h3>
-                    <p class="text-gray-500 mb-6">Starting from <span class="text-orange font-bold text-xl">KSh 35,000</span></p>
-                    <a href="web-design.html" class="text-indigo font-bold hover:text-orange">Request Quote →</a>
+                <div class="card p-10 border-t-4 border-orange shadow-2xl">
+                    <div class="text-orange text-5xl mb-6"><i class="fas fa-code"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo">Web Design</h3>
+                    <p class="text-gray-600 mb-6">High-speed, SEO-optimized websites built to convert visitors into leads.</p>
+                    <a href="web-design.html" class="text-orange font-bold hover:underline">Explore Web →</a>
                 </div>
-                <div class="p-10 border rounded-xl hover:shadow-2xl transition text-center bg-white border-gray-100">
-                    <h3 class="text-2xl font-bold mb-4">Digital Marketing</h3>
-                    <p class="text-gray-500 mb-6">From <span class="text-orange font-bold text-xl">KSh 15,000/mo</span></p>
-                    <a href="digital-marketing.html" class="text-indigo font-bold hover:text-orange">Request Custom Plan →</a>
+                <div class="card p-10">
+                    <div class="text-orange text-5xl mb-6"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-6">SEO, Google Ads, and Social Media management focused on ROI.</p>
+                    <a href="digital-marketing.html" class="text-orange font-bold hover:underline">Explore Marketing →</a>
                 </div>
             </div>
-            <p class="text-xs text-gray-400 mt-8">*All prices exclude 16% VAT (if applicable)</p>
         </div>
     </section>
 
-    <!-- 6. REAL RESULTS SLIDER (MOCK) -->
+    <!-- 7. PORTFOLIO PREVIEW -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-indigo">Our Proof of Results</h2>
+                    <div class="w-20 h-1 bg-orange mt-4"></div>
+                </div>
+                <a href="portfolio.html" class="text-orange font-bold mt-6 md:mt-0 hover:mr-2 transition-all">View Full Portfolio <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&w=600&q=80" alt="Work 1" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-indigo bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center p-4">
+                            <h4 class="text-white text-xl font-bold">Fintech Branding</h4>
+                            <p class="text-orange text-sm mb-4">Logo & UI Design</p>
+                            <a href="portfolio.html" class="btn btn-secondary py-2 px-4 text-xs">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Work 2" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-indigo bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center p-4">
+                            <h4 class="text-white text-xl font-bold">E-commerce Site</h4>
+                            <p class="text-orange text-sm mb-4">Web Development</p>
+                            <a href="portfolio.html" class="btn btn-secondary py-2 px-4 text-xs">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Work 3" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-indigo bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center p-4">
+                            <h4 class="text-white text-xl font-bold">Marketing Dashboard</h4>
+                            <p class="text-orange text-sm mb-4">Digital Strategy</p>
+                            <a href="portfolio.html" class="btn btn-secondary py-2 px-4 text-xs">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PRICING HINT CARDS -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-indigo">Simple, Transparent Pricing</h2>
+            <p class="text-gray-500 mb-16">Investment plans built to scale with your business goals.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow border border-gray-100">
+                    <h4 class="text-xl font-bold text-indigo mb-2">Starter Package</h4>
+                    <p class="text-gray-400 text-sm mb-6">Perfect for new businesses</p>
+                    <div class="text-4xl font-bold text-indigo mb-6">KSh 15k<span class="text-sm font-normal text-gray-400">/one-time</span></div>
+                    <ul class="text-left space-y-4 mb-8 text-sm">
+                        <li><i class="fas fa-check text-success mr-2"></i> Professional Logo Design</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> Business Card Design</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> Social Media Kit</li>
+                    </ul>
+                    <a href="contact.html?plan=starter" class="btn btn-primary w-full">Request Quote</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-2 border-orange relative scale-105">
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange text-white px-4 py-1 rounded-full text-xs font-bold">MOST POPULAR</span>
+                    <h4 class="text-xl font-bold text-indigo mb-2">Growth Package</h4>
+                    <p class="text-gray-400 text-sm mb-6">Scale your online presence</p>
+                    <div class="text-4xl font-bold text-indigo mb-6">KSh 45k<span class="text-sm font-normal text-gray-400">/one-time</span></div>
+                    <ul class="text-left space-y-4 mb-8 text-sm">
+                        <li><i class="fas fa-check text-success mr-2"></i> 5-Page Conversion Website</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> SEO Setup & Submission</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> 1 Month Support</li>
+                    </ul>
+                    <a href="contact.html?plan=growth" class="btn btn-secondary w-full">Claim This Offer</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow border border-gray-100">
+                    <h4 class="text-xl font-bold text-indigo mb-2">Premium Package</h4>
+                    <p class="text-gray-400 text-sm mb-6">Full digital domination</p>
+                    <div class="text-4xl font-bold text-indigo mb-6">Custom<span class="text-sm font-normal text-gray-400">/monthly</span></div>
+                    <ul class="text-left space-y-4 mb-8 text-sm">
+                        <li><i class="fas fa-check text-success mr-2"></i> Full SEO & Google Ads</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> Content Marketing Plan</li>
+                        <li><i class="fas fa-check text-success mr-2"></i> Dedicated Growth Manager</li>
+                    </ul>
+                    <a href="contact.html?plan=premium" class="btn btn-primary w-full">Book a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. LEAD CAPTURE FORM (Main Hub) -->
+    <section id="lead-form" class="section-padding bg-indigo text-white">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">Let's Build Something <span class="text-orange">Legendary.</span></h2>
+                <p class="text-xl text-gray-300 mb-8">Ready to grow your revenue? Fill out the form, and our lead strategist will contact you within 2 business hours with a custom roadmap.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-xl"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <p class="text-sm text-gray-400">Call Us Anytime</p>
+                            <p class="font-bold">+254 715 135 141</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-xl"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-sm text-gray-400">Email Us</p>
+                            <p class="font-bold">growth@kimgraphics.co.ke</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 md:p-12 rounded-2xl text-indigo shadow-2xl">
+                <form id="hp-lead-form" class="space-y-6">
+                    <input type="hidden" name="source" value="JulesMultiPage_Home">
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Full Name *</label>
+                        <input type="text" name="name" required placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-orange">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Business Email *</label>
+                        <input type="email" name="email" required placeholder="email@company.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-orange">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Interest *</label>
+                        <select name="service" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-orange">
+                            <option value="">Select a Service</option>
+                            <option value="graphic">Graphic Design / Branding</option>
+                            <option value="web">Web Design / E-commerce</option>
+                            <option value="marketing">Digital Marketing / SEO</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-full py-4 text-xl shadow-lg">Get My Free Proposal →</button>
+                    <p class="text-xs text-center text-gray-400 mt-4"><i class="fas fa-lock mr-1"></i> Your data is safe. We never spam.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TESTIMONIALS TICKER (Manual Scroll) -->
+    <section class="section-padding bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold mb-12">What Our Clients Say</h2>
+            <div class="flex space-x-8 overflow-x-auto pb-8 snap-x no-scrollbar">
+                <div class="min-w-[300px] md:min-w-[400px] bg-light p-8 rounded-xl snap-center">
+                    <div class="flex text-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-gray-600 mb-6">"Kim Graphics turned our messy brand into something that looks like a multinational company. Our sales increased by 40% in the first month."</p>
+                    <p class="font-bold">John Mwangi</p>
+                    <p class="text-xs text-gray-400">CEO, Nairobi Tech Hub</p>
+                </div>
+                <div class="min-w-[300px] md:min-w-[400px] bg-light p-8 rounded-xl snap-center">
+                    <div class="flex text-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-gray-600 mb-6">"The best web developers in Nairobi. They actually understand SEO and conversion, not just pretty pictures."</p>
+                    <p class="font-bold">Sarah Otieno</p>
+                    <p class="text-xs text-gray-400">Founder, Bloom Florals KE</p>
+                </div>
+                <div class="min-w-[300px] md:min-w-[400px] bg-light p-8 rounded-xl snap-center">
+                    <div class="flex text-orange mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-gray-600 mb-6">"Our Google Ads ROI tripled since we switched to Kim Graphics. They are data-driven and results-oriented."</p>
+                    <p class="font-bold">Kevin Korir</p>
+                    <p class="text-xs text-gray-400">Director, Rift Safari Tours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. BLOG PREVIEW -->
     <section class="section-padding bg-light">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Real Results for Local Brands</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-3xl font-bold text-orange mb-2">+250%</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo">Lead Growth</p>
-                    <p class="text-xs text-gray-500 mt-2">Kenyan Fintech Startup</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-3xl font-bold text-orange mb-2">#1 Rank</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo">SEO Position</p>
-                    <p class="text-xs text-gray-500 mt-2">Nairobi Restaurant Chain</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-3xl font-bold text-orange mb-2">50k+</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo">Social Followers</p>
-                    <p class="text-xs text-gray-500 mt-2">Local Fashion Brand</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="text-3xl font-bold text-orange mb-2">2x</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo">Sales Conversion</p>
-                    <p class="text-xs text-gray-500 mt-2">Mombasa E-commerce Store</p>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="case-studies.html" class="text-orange font-bold underline">Read the full Case Studies here</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. LATEST FROM BLOG -->
-    <section class="section-padding bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-3xl font-bold">Latest from our Blog</h2>
-                <a href="blog.html" class="text-orange font-bold">See All Posts →</a>
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo">Growth Insights</h2>
+                <a href="blog.html" class="text-orange font-bold">Read All Posts</a>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <a href="blog-post-1.html" class="blog-card block">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Logo Trends" class="w-full h-48 object-cover">
+                <div class="bg-white rounded-xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Blog 1" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">10 Logo Design Trends in Kenya for 2025</h3>
-                        <p class="text-gray-500 text-sm mb-4">Discover how local culture is shaping the next decade of branding...</p>
-                        <span class="text-orange font-bold text-sm">Read More (5 min)</span>
+                        <h4 class="font-bold text-lg mb-2">10 Design Tricks That Double Conversions</h4>
+                        <p class="text-gray-500 text-sm mb-4">Learn how simple color and layout changes can drive more sales...</p>
+                        <a href="blog.html" class="text-indigo font-bold text-sm">Read More →</a>
                     </div>
-                </a>
-                <a href="blog-post-2.html" class="blog-card block">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Mobile Web" class="w-full h-48 object-cover">
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=600&q=80" alt="Blog 2" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Why Your SME Needs a Mobile-First Website in 2026</h3>
-                        <p class="text-gray-500 text-sm mb-4">Kenyan internet traffic is 90% mobile. Is your business ready?</p>
-                        <span class="text-orange font-bold text-sm">Read More (6 min)</span>
+                        <h4 class="font-bold text-lg mb-2">Nairobi SEO Guide for 2025</h4>
+                        <p class="text-gray-500 text-sm mb-4">How to rank #1 in Kenya for your most profitable keywords...</p>
+                        <a href="blog.html" class="text-indigo font-bold text-sm">Read More →</a>
                     </div>
-                </a>
-                <a href="blog-post-3.html" class="blog-card block">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="SEO vs Ads" class="w-full h-48 object-cover">
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Blog 3" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">SEO vs Google Ads: Which Gives Better ROI in Nairobi?</h3>
-                        <p class="text-gray-500 text-sm mb-4">A complete cost breakdown for businesses targeting local search...</p>
-                        <span class="text-orange font-bold text-sm">Read More (8 min)</span>
+                        <h4 class="font-bold text-lg mb-2">DIY vs Agency Web Design</h4>
+                        <p class="text-gray-500 text-sm mb-4">The hidden costs of "free" website builders and why they fail...</p>
+                        <a href="blog.html" class="text-indigo font-bold text-sm">Read More →</a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. KENYAN TESTIMONIAL TICKER -->
-    <div class="ticker-wrap border-y border-gray-100">
-        <div class="ticker">
-            <div class="ticker-item">"Kim Graphics doubled our leads in 3 months!" — Maryanne, Nairobi</div>
-            <div class="ticker-item">"Professional, fast, and creative." — James, Mombasa</div>
-            <div class="ticker-item">"The best web agency we've ever worked with." — TechCorp Kenya</div>
-            <div class="ticker-item">"Amazing logo design that truly represents our brand." — FreshFoods KE</div>
-            <div class="ticker-item">"Kim Graphics doubled our leads in 3 months!" — Maryanne, Nairobi</div>
-            <div class="ticker-item">"Professional, fast, and creative." — James, Mombasa</div>
-        </div>
-    </div>
+    <!-- 12. FOOTER -->
 
-    <!-- 9. FOOTER -->
-    <footer class="bg-indigo text-white py-16">
-        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12">
+
+    <!-- STICKY CONTACT BAR (Mobile First CRO) -->
+
+
+    <!-- WHATSAPP FLOATER -->
+
+
+    <!-- SLIDE-IN CTA -->
+
+
+    <!-- EXIT POPUP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-indigo text-white pt-20 pb-10 mt-20">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 text-left">
             <div>
-                <h4 class="text-2xl font-bold mb-6 flex items-center gap-2">KIM GRAPHICS <span class="text-orange text-lg">♦️</span></h4>
-                <p class="text-gray-400">Based in Nairobi, Kenya — serving ambitious clients worldwide.</p>
+                <h4 class="text-2xl font-bold mb-6 flex items-center gap-2 text-white">KIM GRAPHICS <span class="text-orange text-lg">♦️</span></h4>
+                <p class="text-gray-400">Kenya's leading growth agency. We build digital assets that work as hard as you do.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
             <div>
-                <h5 class="font-bold mb-4 uppercase text-orange">Services</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="graphic-design.html" class="hover:text-orange transition">Logo & Branding</a></li>
-                    <li><a href="web-design.html" class="hover:text-orange transition">Web Development</a></li>
-                    <li><a href="digital-marketing.html" class="hover:text-orange transition">SEO & Lead Gen</a></li>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Solutions</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="graphic-design.html" class="hover:text-orange transition text-gray-400 no-underline">Logo & Identity</a></li>
+                    <li><a href="web-design.html" class="hover:text-orange transition text-gray-400 no-underline">Custom Web Apps</a></li>
+                    <li><a href="digital-marketing.html" class="hover:text-orange transition text-gray-400 no-underline">Search Engine Optimization</a></li>
+                    <li><a href="portfolio.html" class="hover:text-orange transition text-gray-400 no-underline">Client Success Stories</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-4 uppercase text-orange">Resources</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="blog.html" class="hover:text-orange transition">Blog & Insights</a></li>
-                    <li><a href="case-studies.html" class="hover:text-orange transition">Case Studies</a></li>
-                    <li><a href="portfolio.html" class="hover:text-orange transition">Portfolio</a></li>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Company</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="blog.html" class="hover:text-orange transition text-gray-400 no-underline">Latest Growth Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-orange transition text-gray-400 no-underline">Contact Support</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-orange transition text-gray-400 no-underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-orange transition text-gray-400 no-underline">Terms of Service</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-4 uppercase text-orange">Legal</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="privacy-policy.html" class="hover:text-orange transition">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="hover:text-orange transition">Terms of Service</a></li>
-                </ul>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest text-white">Join Our Growth List</h5>
+                <p class="text-xs text-gray-500 mb-4">Get weekly conversion tips delivered to your inbox.</p>
+                <form class="flex">
+                    <input type="email" required placeholder="email@company.com" class="bg-white bg-opacity-10 border border-gray-700 px-4 py-2 rounded-l-md w-full focus:outline-none text-white text-sm">
+                    <button class="bg-orange px-4 py-2 rounded-r-md hover:bg-opacity-90 transition text-white"><i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
-        <div class="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            © 2025 Kim Graphics Company. Expertly crafted in Nairobi.
+        <div class="container mx-auto px-4 mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p>© 2025 Kim Graphics Company. All Rights Reserved. Kenyan-Owned.</p>
+            <p>123 Riverside Drive, Nairobi, Kenya | +254 715 135 141</p>
         </div>
     </footer>
 
-        <!-- STICKY WHATSAPP -->
+    <!-- STANDARDIZED STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar lg:hidden">
+        <a href="tel:+254715135141" class="no-underline"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/254715135141" class="no-underline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="contact.html" class="no-underline"><i class="fas fa-envelope"></i> Get Quote</a>
+    </div>
+
+    <!-- STANDARDIZED WHATSAPP FLOAT -->
     <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
-       class="whatsapp-float"
+       class="whatsapp-float hidden md:flex"
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- STICKY CONTACT BAR -->
-    <div class="sticky-contact-bar">
-        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
-        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+
+    <!-- STANDARDIZED SLIDE-IN CTA -->
+    <div class="slide-in-cta">
+        <button class="close-cta absolute top-2 right-2 text-gray-400 hover:text-indigo">&times;</button>
+        <p class="font-bold text-indigo mb-2 text-lg">Need a design today?</p>
+        <p class="text-sm text-gray-500 mb-4">Our Nairobi team is online and ready to chat about your project.</p>
+        <a href="https://wa.me/254715135141" class="btn btn-secondary w-full text-xs py-2">Chat with an Expert</a>
     </div>
-    <!-- STICKY BOTTOM-LEFT CTA -->
-    <div id="sticky-bottom-left">
-        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
-        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
-    </div>
-    <!-- EXIT POPUP -->
-    <div id="exit-popup">
-        <div class="popup-content">
-            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
-            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
-            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+
+    <!-- STANDARDIZED EXIT POPUP -->
+    <div id="exit-popup" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="w-20 h-20 bg-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-3xl">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-indigo">Wait! Don't Leave Empty Handed</h2>
+            <p class="text-gray-600 mb-8">Get <span class="text-orange font-bold">10% OFF</span> your first project and our "Nairobi Growth Guide" instantly.</p>
             <form class="space-y-4">
-                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
-                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+                <input type="email" required placeholder="Your Business Email" class="w-full px-4 py-3 border rounded-lg focus:outline-orange">
+                <button type="submit" class="btn btn-secondary w-full py-4 text-lg">Send My Discount Code</button>
             </form>
-            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+            <p class="text-xs text-gray-400 mt-6 italic">Join 1,000+ business owners scaling with Kim Graphics.</p>
         </div>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

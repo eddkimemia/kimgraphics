@@ -1,157 +1,239 @@
 /*
-  Kim Graphics Company - Interactive CRO Features
-  Updated for Kenyan localization and new features
+  Kim Graphics Company - Centralized CRO & Interaction Logic
+  Localization: Nairobi, Kenya
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initCountdown();
-    initExitIntent();
-    initScrollTriggers();
+    initMobileMenu();
     initForms();
-    initBlogSearch();
+    initExitIntent();
+    initCountdown();
+    initPortfolioFilter();
+    initScrollCTA();
+    initTicker();
+    initBASlider();
+    initLightbox();
+    initMultiStepForm();
 });
 
-// 1. COUNTDOWN TIMER (Resets daily)
-function initCountdown() {
-    const timerDisplay = document.getElementById('countdown-timer');
-    if (!timerDisplay) return;
-
-    function updateTimer() {
-        const now = new Date();
-        const endOfDay = new Date();
-        endOfDay.setHours(23, 59, 59, 999);
-
-        let diff = endOfDay - now;
-
-        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        timerDisplay.textContent =
-            `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
-
-    setInterval(updateTimer, 1000);
-    updateTimer();
-}
-
-// 2. EXIT INTENT POPUP (Free Website Conversion Checklist)
-function initExitIntent() {
-    const popup = document.getElementById('exit-popup');
-    if (!popup) return;
-
-    const hasShown = sessionStorage.getItem('exitPopupShown');
-
-    if (!hasShown) {
-        document.addEventListener('mouseleave', (e) => {
-            if (e.clientY < 0) {
-                popup.style.display = 'flex';
-                sessionStorage.setItem('exitPopupShown', 'true');
-                console.log('CRO Trigger: Exit-intent popup (Checklist) displayed');
-            }
+// 1. MOBILE MENU
+function initMobileMenu() {
+    const toggle = document.querySelector('[data-menu-toggle]');
+    const menu = document.querySelector('[data-mobile-menu]');
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
     }
-
-    window.closePopup = () => {
-        popup.style.display = 'none';
-    };
 }
 
-// 3. SCROLL TRIGGERS (Bottom-left Sticky CTA at 30% scroll)
-function initScrollTriggers() {
-    const stickyCTA = document.getElementById('sticky-bottom-left');
-    let hasTracked25 = false, hasTracked50 = false, hasTracked75 = false;
-
-    window.addEventListener('scroll', () => {
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-        // Sticky CTA at 30%
-        if (scrollPercent > 30 && stickyCTA) {
-            stickyCTA.classList.add('active');
-        }
-
-        // Analytics tracking
-        if (scrollPercent > 25 && !hasTracked25) { console.log('Analytics: Scroll Depth 25%'); hasTracked25 = true; }
-        if (scrollPercent > 50 && !hasTracked50) { console.log('Analytics: Scroll Depth 50%'); hasTracked50 = true; }
-        if (scrollPercent > 75 && !hasTracked75) { console.log('Analytics: Scroll Depth 75%'); hasTracked75 = true; }
-    });
-}
-
-// 4. MOCK FORM SUBMISSIONS
+// 2. FORMS & ANALYTICS
 function initForms() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            const isMultiStep = form.id === 'multi-step-form';
+            if (isMultiStep) {
+                 const currentStep = form.querySelector('.form-step.active');
+                 const nextStep = currentStep.nextElementSibling;
+                 if (nextStep && nextStep.classList.contains('form-step')) {
+                     e.preventDefault();
+                     return;
+                 }
+            }
 
+            e.preventDefault();
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            console.log('Form Submission Captured:', {
+            console.log('Conversion Captured:', {
                 page: window.location.pathname,
-                data: data,
-                source: 'JulesMultiPage'
+                timestamp: new Date().toISOString(),
+                source: 'JulesMultiPage',
+                ...data
             });
 
-            // Redirect to thank-you.html
-            setTimeout(() => {
-                window.location.href = 'thank-you.html';
-            }, 300);
+            // Tracking scroll depth at conversion
+            const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            console.log(`Lead Scroll Depth: ${scrollDepth}%`);
+
+            window.location.href = 'thank-you.html';
         });
     });
 }
 
-// 5. BLOG SEARCH (Simple client-side filter)
-function initBlogSearch() {
-    const searchInput = document.getElementById('blog-search');
-    if (!searchInput) return;
+// 3. EXIT INTENT (Session Managed)
+function initExitIntent() {
+    const modal = document.getElementById('exit-popup');
+    if (!modal) return;
 
-    searchInput.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase();
-        const posts = document.querySelectorAll('.blog-card');
+    if (!sessionStorage.getItem('exitPopupShown')) {
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 20) {
+                modal.style.display = 'flex';
+                sessionStorage.setItem('exitPopupShown', 'true');
+                console.log('CRO Event: Exit intent triggered');
+            }
+        });
+    }
 
-        posts.forEach(post => {
-            const title = post.querySelector('h3').textContent.toLowerCase();
-            const summary = post.querySelector('p').textContent.toLowerCase();
-            if (title.includes(term) || summary.includes(term)) {
-                post.style.display = 'block';
+    const close = modal.querySelector('.modal-close');
+    if (close) close.onclick = () => modal.style.display = 'none';
+}
+
+// 4. DAILY RESET COUNTDOWN
+function initCountdown() {
+    const timer = document.getElementById('countdown-timer');
+    if (!timer) return;
+
+    function update() {
+        const now = new Date();
+        const end = new Date();
+        end.setHours(23, 59, 59, 999);
+        const diff = end - now;
+
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+
+        timer.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+    setInterval(update, 1000);
+    update();
+}
+
+// 5. SCROLL TRIGGERED CTA (50% depth)
+function initScrollCTA() {
+    const cta = document.querySelector('.slide-in-cta');
+    if (!cta) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        if (scrolled > 50) {
+            cta.classList.add('active');
+        } else {
+            cta.classList.remove('active');
+        }
+    });
+
+    const close = cta.querySelector('.close-cta');
+    if (close) {
+        close.onclick = () => {
+            cta.style.display = 'none';
+            console.log('CRO Event: Slide-in CTA dismissed');
+        };
+    }
+}
+
+// 6. SOCIAL PROOF TICKER (Infinite loop)
+function initTicker() {
+    const ticker = document.querySelector('.ticker');
+    if (!ticker) return;
+    // Duplicate items for seamless loop
+    ticker.innerHTML += ticker.innerHTML;
+}
+
+// 7. BEFORE/AFTER SLIDER
+function initBASlider() {
+    const container = document.querySelector('.ba-container');
+    if (!container) return;
+
+    const slider = container.querySelector('.ba-slider');
+    const afterImg = container.querySelector('.ba-after');
+
+    container.addEventListener('mousemove', (e) => {
+        let x = e.pageX - container.offsetLeft;
+        let width = container.offsetWidth;
+        if (x < 0) x = 0;
+        if (x > width) x = width;
+        let percent = (x / width) * 100;
+        slider.style.left = percent + '%';
+        afterImg.style.width = percent + '%';
+    });
+}
+
+// 8. LIGHTBOX & POPUP LEAD
+function initLightbox() {
+    const items = document.querySelectorAll('[data-lightbox]');
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const src = item.getAttribute('href');
+            lightbox.querySelector('img').src = src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightbox.onclick = () => {
+        lightbox.style.display = 'none';
+        // After closing lightbox, show a lead form if not shown recently
+        if (!sessionStorage.getItem('lightboxLeadShown')) {
+             setTimeout(() => {
+                 const exitModal = document.getElementById('exit-popup');
+                 if(exitModal) exitModal.style.display = 'flex';
+                 sessionStorage.setItem('lightboxLeadShown', 'true');
+             }, 500);
+        }
+    };
+}
+
+// 9. MULTI-STEP FORM LOGIC
+function initMultiStepForm() {
+    const form = document.getElementById('multi-step-form');
+    if (!form) return;
+
+    const steps = form.querySelectorAll('.form-step');
+    const nextBtns = form.querySelectorAll('.next-step');
+    const prevBtns = form.querySelectorAll('.prev-step');
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentStep = form.querySelector('.form-step.active');
+            // Basic validation for current step
+            const inputs = currentStep.querySelectorAll('input, select, textarea');
+            let valid = true;
+            inputs.forEach(i => { if(i.hasAttribute('required') && !i.value) valid = false; });
+
+            if (valid) {
+                currentStep.classList.remove('active');
+                currentStep.nextElementSibling.classList.add('active');
             } else {
-                post.style.display = 'none';
+                alert('Please fill in all required fields.');
             }
         });
     });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentStep = form.querySelector('.form-step.active');
+            currentStep.classList.remove('active');
+            currentStep.previousElementSibling.classList.add('active');
+        });
+    });
 }
 
-// PORTFOLIO / INDUSTRY FILTER
-window.filterPortfolio = (category, element) => {
-    const items = document.querySelectorAll('.portfolio-item');
-    const buttons = document.querySelectorAll('.filter-btn');
+// 10. PORTFOLIO FILTER
+function initPortfolioFilter() {
+    const btns = document.querySelectorAll('[data-filter]');
+    const items = document.querySelectorAll('[data-category]');
 
-    buttons.forEach(btn => btn.classList.remove('active', 'bg-orange', 'text-white'));
-    if (element) {
-        element.classList.add('active', 'bg-orange', 'text-white');
-    }
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            btns.forEach(b => b.classList.remove('bg-orange', 'text-white'));
+            btn.classList.add('bg-orange', 'text-white');
 
-    items.forEach(item => {
-        const itemCategory = item.dataset.category;
-        const itemIndustry = item.dataset.industry;
-
-        if (category === 'all' || itemCategory === category || itemIndustry === category) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
+            items.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
     });
-    console.log(`Filter Applied: ${category}`);
-};
-
-// ROI CALCULATOR (Digital Marketing Page - KES)
-window.updateROI = () => {
-    const spend = document.getElementById('ad-spend').value;
-    const leads = Math.floor(spend / 1500); // Assume KSh 1,500 per lead
-    const revenue = leads * 10000; // Assume KSh 10,000 value per lead
-
-    document.getElementById('spend-val').textContent = `KSh ${Number(spend).toLocaleString()}`;
-    document.getElementById('leads-val').textContent = leads;
-    document.getElementById('revenue-val').textContent = `KSh ${revenue.toLocaleString()}`;
-};
+}
