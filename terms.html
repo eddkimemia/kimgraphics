@@ -9,6 +9,11 @@
     <style>body { font-family: 'Poppins', sans-serif; }</style>
 </head>
 <body class="bg-gray-50 text-gray-800 py-20">
+    <!-- 1. COUNTDOWN BANNER -->
+    <div class="countdown-banner sticky top-0 z-[60]">
+        Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
+    </div>
+
     <div class="max-w-3xl mx-auto px-6 bg-white p-12 rounded-xl shadow-md">
         <a href="index.html" class="text-orange-500 font-bold mb-8 inline-block">← Back Home</a>
         <h1 class="text-3xl font-bold mb-6">Terms of Service</h1>
@@ -19,6 +24,37 @@
         <p class="mb-4">Unlimited revisions apply within the original project scope as defined in the package selection.</p>
         <h2 class="text-xl font-bold mt-8 mb-4">3. Ownership</h2>
         <p class="mb-4">Upon full payment, ownership of design files is transferred to the client.</p>
+    </div>
+
+    <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
+       class="whatsapp-float"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
+    <!-- STICKY BOTTOM-LEFT CTA -->
+    <div id="sticky-bottom-left">
+        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
+        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
+    </div>
+    <!-- EXIT POPUP -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
+            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+            <form class="space-y-4">
+                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+        </div>
     </div>
 </body>
 </html>

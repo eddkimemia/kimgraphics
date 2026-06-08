@@ -8,52 +8,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        indigo: '#1A1A3A',
-                        orange: '#FF6B35',
-                        light: '#F7F7F7'
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
+    <!-- 1. COUNTDOWN BANNER -->
+    <div class="countdown-banner sticky top-0 z-[60]">
+        Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
+    </div>
 
     <section class="min-h-screen flex items-center justify-center py-20 px-4">
-        <div class="max-w-2xl w-full bg-white p-12 rounded-3xl shadow-2xl text-center">
+        <div class="max-w-2xl w-full bg-white p-12 rounded-3xl shadow-2xl text-center border-t-8 border-orange">
             <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-8">
                 <i class="fas fa-check"></i>
             </div>
-            <h1 class="text-4xl font-bold mb-4">Request Received!</h1>
-            <p class="text-xl text-gray-600 mb-8">We've received your details. Our strategy team is already reviewing your request and will send a custom proposal within <span class="font-bold text-indigo">2 hours</span>.</p>
+            <h1 class="text-4xl font-bold mb-4 text-indigo">Asante! Request Received.</h1>
+            <p class="text-xl text-gray-600 mb-8">Our strategy team in Nairobi is reviewing your details. We will send your custom proposal within <span class="font-bold text-indigo">2 hours</span>.</p>
 
-            <div class="bg-indigo text-white p-8 rounded-2xl mb-12 text-left">
-                <h3 class="text-xl font-bold mb-4">Wait! While you're here...</h3>
-                <p class="text-gray-300 mb-6 text-sm">Download our free guide: <strong>'10 Design Tricks That Double Conversions'</strong> and start improving your ROI today.</p>
-                <form class="space-y-4">
-                    <input type="email" placeholder="Confirm your email" class="w-full p-3 rounded text-indigo outline-none">
-                    <button type="submit" class="cta-button w-full">Download Free Guide</button>
-                </form>
+            <div class="bg-indigo text-white p-8 rounded-2xl mb-12 text-left border-l-4 border-orange">
+                <h3 class="text-xl font-bold mb-4">While you wait...</h3>
+                <p class="text-gray-300 mb-6 text-sm">Read our latest case study on how we helped a Kenyan brand increase their revenue by 340%.</p>
+                <a href="case-studies.html" class="cta-button w-full">Read Case Study →</a>
             </div>
 
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="portfolio.html" class="text-indigo font-bold hover:text-orange transition">← Back to Portfolio</a>
+                <a href="index.html" class="text-indigo font-bold hover:text-orange transition">← Back to Homepage</a>
                 <span class="text-gray-300 hidden md:block">|</span>
-                <div class="flex gap-4">
-                    <p class="text-sm font-bold text-gray-400">Share the love:</p>
-                    <a href="#" class="text-gray-400 hover:text-indigo"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-indigo"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-indigo"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <a href="portfolio.html" class="text-indigo font-bold hover:text-orange transition">View Portfolio</a>
             </div>
         </div>
     </section>
 
+        <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
+       class="whatsapp-float"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
+    <!-- STICKY BOTTOM-LEFT CTA -->
+    <div id="sticky-bottom-left">
+        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
+        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
+    </div>
+    <!-- EXIT POPUP -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
+            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+            <form class="space-y-4">
+                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

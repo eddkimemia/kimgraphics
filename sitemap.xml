@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kimgraphics.com/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://kimgraphics.com/graphic-design.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kimgraphics.com/web-design.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kimgraphics.com/digital-marketing.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kimgraphics.com/portfolio.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kimgraphics.com/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://kimgraphics.co.ke/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://kimgraphics.co.ke/graphic-design.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kimgraphics.co.ke/web-design.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kimgraphics.co.ke/digital-marketing.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kimgraphics.co.ke/portfolio.html</loc><priority>0.7</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog.html</loc><priority>0.9</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-1.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-2.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-3.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-4.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-5.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/blog-post-6.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kimgraphics.co.ke/case-studies.html</loc><priority>0.9</priority></url>
+  <url><loc>https://kimgraphics.co.ke/contact.html</loc><priority>0.9</priority></url>
 </urlset>

@@ -3,187 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High-Conversion Web Design | Kim Graphics Company</title>
-    <meta name="description" content="Custom web design and development focused on conversion rate optimization, speed, and mobile responsiveness.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="High-Conversion Web Design | Kim Graphics Company">
-    <meta property="og:description" content="Build a website that turns visitors into loyal customers.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&h=630&q=80">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Web Design",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Kim Graphics Company"
-      },
-      "description": "Custom, responsive, high-performance web design."
-    }
-    </script>
-
+    <title>High-Conversion Web Design Nairobi | Kim Graphics Company</title>
+    <meta name="description" content="Custom web design in Kenya. Fast, mobile-first websites starting from KSh 35,000. Built for speed and leads.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        indigo: '#1A1A3A',
-                        orange: '#FF6B35',
-                        light: '#F7F7F7'
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- 1. COUNTDOWN BANNER -->
     <div class="countdown-banner sticky top-0 z-[60]">
-        Free Speed Optimization with every Web Project — Expires in <span id="countdown-timer">24:00:00</span>
+        Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <!-- 2. HEADER -->
     <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tight">KIM <span class="text-orange">GRAPHICS</span></a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="graphic-design.html" class="hover:text-orange transition">Graphic Design</a>
-                <a href="web-design.html" class="text-orange font-bold">Web Design</a>
-                <a href="digital-marketing.html" class="hover:text-orange transition">Marketing</a>
-                <a href="portfolio.html" class="hover:text-orange transition">Portfolio</a>
-                <a href="contact.html" class="cta-button">Free Quote →</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
+            </a>
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm">Graphic Design</a>
+                <a href="web-design.html" class="text-orange font-bold text-sm">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm">Marketing</a>
+                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
             </nav>
-            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION -->
-    <section class="bg-indigo text-white py-24 relative overflow-hidden">
-        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Websites That <br><span class="text-orange">Convert Visitors</span> Into Customers.</h1>
-                <p class="text-xl text-gray-300 mb-8">We don't just build websites; we build sales machines. Fast, responsive, and optimized for maximum ROI.</p>
-                <a href="#audit" class="cta-button text-lg">Get Your Free Website Audit</a>
-            </div>
-            <div class="relative">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Web Design Mockup" class="rounded-lg shadow-2xl">
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. FEATURES -->
-    <section class="section-padding bg-white">
-        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <i class="fas fa-mobile-alt text-4xl text-orange mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Responsive</h3>
-                <p class="text-gray-500">Perfect viewing on phones, tablets, and desktops.</p>
-            </div>
-            <div class="text-center">
-                <i class="fas fa-bolt text-4xl text-orange mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Lightning Fast</h3>
-                <p class="text-gray-500">Optimized code for sub-2 second load times.</p>
-            </div>
-            <div class="text-center">
-                <i class="fas fa-shopping-cart text-4xl text-orange mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">E-commerce</h3>
-                <p class="text-gray-500">Powerful online stores built to scale your revenue.</p>
-            </div>
-            <div class="text-center">
-                <i class="fas fa-search-dollar text-4xl text-orange mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">SEO Ready</h3>
-                <p class="text-gray-500">Built-in optimization to rank on Google from day one.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. DIY VS KIM GRAPHICS -->
-    <section class="section-padding bg-light">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-12">DIY Builders vs. Kim Graphics</h2>
-            <div class="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border shadow-xl">
-                <div class="bg-gray-100 p-8">
-                    <h3 class="font-bold text-xl mb-6">DIY / Templates</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-gray-500"><i class="fas fa-times text-red-500"></i> Slow loading speeds</li>
-                        <li class="flex items-center gap-3 text-gray-500"><i class="fas fa-times text-red-500"></i> Generic, unoriginal design</li>
-                        <li class="flex items-center gap-3 text-gray-500"><i class="fas fa-times text-red-500"></i> No conversion strategy</li>
-                        <li class="flex items-center gap-3 text-gray-500"><i class="fas fa-times text-red-500"></i> Poor SEO performance</li>
-                    </ul>
-                </div>
-                <div class="bg-indigo text-white p-8">
-                    <h3 class="font-bold text-xl mb-6">Kim Graphics</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> High-speed performance</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> 100% Custom tailored design</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Built-in CRO & Sales funnels</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Advanced SEO structure</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. WEB PORTFOLIO (6 mockups) -->
-    <section class="section-padding bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our High-Performance Sites</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" alt="SaaS Dashboard Mockup" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">SaaS Platform</p>
-                </div>
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=800&q=80" alt="Tech Company Landing Page" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">Tech Landing Page</p>
-                </div>
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1522542550221-31fd19fe4af0?auto=format&fit=crop&w=800&q=80" alt="Creative Agency Site" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">Creative Portfolio</p>
-                </div>
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="E-commerce Store Mockup" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">E-commerce Engine</p>
-                </div>
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Corporate Website" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">Corporate Hub</p>
-                </div>
-                <div class="space-y-4">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Real Estate Portal" class="rounded-lg shadow-lg border">
-                    <p class="font-bold text-center">Real Estate Portal</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FREE AUDIT LEAD MAGNET -->
-    <section id="audit" class="section-padding bg-orange text-white">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl font-bold mb-4">Is Your Website Losing You Money?</h2>
-            <p class="mb-8 opacity-90 text-lg">Enter your URL below for a FREE conversion & speed audit (Valued at $299).</p>
-            <form class="flex flex-col md:flex-row gap-4">
-                <input type="url" placeholder="Your Website URL" required class="flex-grow p-4 rounded-md text-indigo outline-none">
-                <input type="email" placeholder="Your Email" required class="flex-grow p-4 rounded-md text-indigo outline-none">
-                <button type="submit" class="bg-indigo px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Send Audit</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-indigo text-white py-16">
+    <section class="bg-indigo text-white py-20">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2024 Kim Graphics Company. Expert Web Solutions.</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Websites That <span class="text-orange">Sell While You Sleep.</span></h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We build fast, secure, and mobile-optimized websites for Kenyan businesses that want to dominate the search results.</p>
+            <a href="#quote" class="cta-button">Get My Custom Web Quote</a>
         </div>
-    </footer>
+    </section>
 
+        <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
+       class="whatsapp-float"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
+    <!-- STICKY BOTTOM-LEFT CTA -->
+    <div id="sticky-bottom-left">
+        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
+        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
+    </div>
+    <!-- EXIT POPUP -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
+            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+            <form class="space-y-4">
+                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

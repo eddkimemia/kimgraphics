@@ -1,5 +1,6 @@
 /*
   Kim Graphics Company - Interactive CRO Features
+  Updated for Kenyan localization and new features
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initExitIntent();
     initScrollTriggers();
     initForms();
-    initLiveChat();
+    initBlogSearch();
 });
 
 // 1. COUNTDOWN TIMER (Resets daily)
@@ -34,7 +35,7 @@ function initCountdown() {
     updateTimer();
 }
 
-// 2. EXIT INTENT POPUP (Local Storage to show once per session)
+// 2. EXIT INTENT POPUP (Free Website Conversion Checklist)
 function initExitIntent() {
     const popup = document.getElementById('exit-popup');
     if (!popup) return;
@@ -46,7 +47,7 @@ function initExitIntent() {
             if (e.clientY < 0) {
                 popup.style.display = 'flex';
                 sessionStorage.setItem('exitPopupShown', 'true');
-                console.log('CRO Trigger: Exit-intent popup displayed');
+                console.log('CRO Trigger: Exit-intent popup (Checklist) displayed');
             }
         });
     }
@@ -56,17 +57,17 @@ function initExitIntent() {
     };
 }
 
-// 3. SCROLL TRIGGERS (Slide-in CTA at 50% scroll)
+// 3. SCROLL TRIGGERS (Bottom-left Sticky CTA at 30% scroll)
 function initScrollTriggers() {
-    const slideIn = document.getElementById('slide-in-cta');
+    const stickyCTA = document.getElementById('sticky-bottom-left');
     let hasTracked25 = false, hasTracked50 = false, hasTracked75 = false;
 
     window.addEventListener('scroll', () => {
         const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
 
-        // Slide-in CTA at 50%
-        if (scrollPercent > 50 && slideIn) {
-            slideIn.classList.add('active');
+        // Sticky CTA at 30%
+        if (scrollPercent > 30 && stickyCTA) {
+            stickyCTA.classList.add('active');
         }
 
         // Analytics tracking
@@ -83,68 +84,74 @@ function initForms() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Hidden field tracking
-            const sourceField = document.createElement('input');
-            sourceField.type = 'hidden';
-            sourceField.name = 'source';
-            sourceField.value = 'JulesMultiPage';
-            form.appendChild(sourceField);
-
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
             console.log('Form Submission Captured:', {
                 page: window.location.pathname,
-                data: data
+                data: data,
+                source: 'JulesMultiPage'
             });
 
-            // Redirect to thank-you.html after short delay
+            // Redirect to thank-you.html
             setTimeout(() => {
                 window.location.href = 'thank-you.html';
-            }, 500);
+            }, 300);
         });
     });
 }
 
-// 5. LIVE CHAT MOCKUP
-function initLiveChat() {
-    const chatBubble = document.getElementById('live-chat-bubble');
-    if (!chatBubble) return;
+// 5. BLOG SEARCH (Simple client-side filter)
+function initBlogSearch() {
+    const searchInput = document.getElementById('blog-search');
+    if (!searchInput) return;
 
-    chatBubble.addEventListener('click', () => {
-        console.log('CRO Action: Live chat clicked');
-        // In real world, open widget. Here, redirect to WhatsApp or Contact
-        window.location.href = 'contact.html';
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const posts = document.querySelectorAll('.blog-card');
+
+        posts.forEach(post => {
+            const title = post.querySelector('h3').textContent.toLowerCase();
+            const summary = post.querySelector('p').textContent.toLowerCase();
+            if (title.includes(term) || summary.includes(term)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
     });
 }
 
-// ROI CALCULATOR (Digital Marketing Page)
-window.updateROI = () => {
-    const spend = document.getElementById('ad-spend').value;
-    const leads = Math.floor(spend / 15); // Assume $15 per lead
-    const revenue = leads * 100; // Assume $100 value per lead
-
-    document.getElementById('spend-val').textContent = `$${spend}`;
-    document.getElementById('leads-val').textContent = leads;
-    document.getElementById('revenue-val').textContent = `$${revenue}`;
-};
-
-// PORTFOLIO FILTER
+// PORTFOLIO / INDUSTRY FILTER
 window.filterPortfolio = (category, element) => {
     const items = document.querySelectorAll('.portfolio-item');
     const buttons = document.querySelectorAll('.filter-btn');
 
-    buttons.forEach(btn => btn.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active', 'bg-orange', 'text-white'));
     if (element) {
-        element.classList.add('active');
+        element.classList.add('active', 'bg-orange', 'text-white');
     }
 
     items.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
+        const itemCategory = item.dataset.category;
+        const itemIndustry = item.dataset.industry;
+
+        if (category === 'all' || itemCategory === category || itemIndustry === category) {
             item.style.display = 'block';
         } else {
             item.style.display = 'none';
         }
     });
-    console.log(`Portfolio Filter: ${category}`);
+    console.log(`Filter Applied: ${category}`);
+};
+
+// ROI CALCULATOR (Digital Marketing Page - KES)
+window.updateROI = () => {
+    const spend = document.getElementById('ad-spend').value;
+    const leads = Math.floor(spend / 1500); // Assume KSh 1,500 per lead
+    const revenue = leads * 10000; // Assume KSh 10,000 value per lead
+
+    document.getElementById('spend-val').textContent = `KSh ${Number(spend).toLocaleString()}`;
+    document.getElementById('leads-val').textContent = leads;
+    document.getElementById('revenue-val').textContent = `KSh ${revenue.toLocaleString()}`;
 };
