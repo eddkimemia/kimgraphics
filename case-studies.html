@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | Proof of Results | Kim Graphics Company</title>
+    <title>Case Studies & ROI Proof | Kim Graphics Company Nairobi</title>
+    <meta name="description" content="In-depth analysis of how we've helped Kenyan businesses scale with design and marketing. Real data, real results.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
@@ -13,63 +14,301 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white">
-    <!-- 1. COUNTDOWN BANNER -->
-    <div class="countdown-banner sticky top-0 z-[60]">
+    <!-- STANDARDIZED COUNTDOWN BANNER -->
+    <div class="promo-banner">
         Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
+    <!-- STANDARDIZED STICKY HEADER -->
+    <header class="bg-indigo text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold flex items-center gap-2">KIM GRAPHICS <span class="text-orange text-xl">♦️</span></a>
-            <nav class="hidden lg:flex space-x-6">
-                <a href="graphic-design.html" class="hover:text-orange transition text-sm">Graphic Design</a>
-                <a href="web-design.html" class="hover:text-orange transition text-sm">Web Design</a>
-                <a href="digital-marketing.html" class="hover:text-orange transition text-sm">Marketing</a>
-                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 text-white no-underline">
+                KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
+            </a>
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Marketing</a>
+                <a href="portfolio.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Portfolio</a>
+                <a href="blog.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Blog</a>
+                <a href="contact.html" class="btn btn-secondary text-sm">Free Quote →</a>
             </nav>
+            <button data-menu-toggle class="lg:hidden text-2xl text-white focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
+        <!-- Mobile Menu -->
+        <nav data-mobile-menu class="hidden lg:hidden bg-indigo border-t border-gray-700 px-4 py-6 space-y-4">
+            <a href="graphic-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Graphic Design</a>
+            <a href="web-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Web Design</a>
+            <a href="digital-marketing.html" class="block hover:text-orange transition font-semibold text-white no-underline">Marketing</a>
+            <a href="portfolio.html" class="block hover:text-orange transition font-semibold text-white no-underline">Portfolio</a>
+            <a href="blog.html" class="block hover:text-orange transition font-semibold text-white no-underline">Blog</a>
+            <a href="contact.html" class="btn btn-secondary w-full">Free Quote →</a>
+        </nav>
     </header>
 
-    <section class="section-padding bg-indigo text-white text-center">
+
+
+
+
+
+
+
+
+
+
+
+    <section class="bg-indigo text-white py-20 text-center">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Proven Results for <span class="text-orange">Ambitious Brands.</span></h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto">We don't just make things look good; we make them perform. Explore our success stories.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Proven Results. No Fluff.</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Discover the data-driven strategies behind some of Nairobi's biggest digital success stories.</p>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container mx-auto px-4 space-y-24">
+    <!-- CASE STUDIES -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 space-y-32">
 
-        <!-- STICKY WHATSAPP -->
+            <!-- CASE STUDY 1: FINTECH -->
+            <div id="swiftpay" class="grid md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <span class="bg-orange text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Fintech & Payments</span>
+                    <h2 class="text-4xl font-bold text-indigo mb-6">SwiftPay: Redefining Mobile Trust in Kenya</h2>
+                    <div class="prose prose-indigo text-gray-600 max-w-none space-y-6">
+                        <p><strong>The Challenge:</strong> SwiftPay launched in 2024 to simplify cross-border payments for Kenyan SMEs. Despite a superior technical product, their conversion rate was stuck at 0.8%. Users felt the brand looked "unprofessional" and were hesitant to link their bank accounts.</p>
+                        <p><strong>The Strategy:</strong> We conducted a full brand audit and identified that the original color palette (neon green) triggered "risk" associations in the financial sector. We pivoted to a Trust-Indigo and Security-Silver theme. We redesigned the landing page using F-pattern layout logic and social proof triggers above the fold.</p>
+                        <p><strong>The Technical Implementation:</strong> We built a custom React-based landing page optimized for Safaricom's network latency, reducing first-contentful-paint (FCP) from 4.2s to 1.1s. We implemented a "Trust Bar" featuring logos of partner banks and SSL badges.</p>
+                        <div class="bg-light p-8 rounded-2xl border-l-8 border-orange my-8">
+                            <h4 class="text-2xl font-bold text-indigo mb-2">+310% Signup Increase</h4>
+                            <p class="text-gray-500">In the first 30 days post-launch, SwiftPay saw daily signups jump from 12 to 49 per day with the same ad spend.</p>
+                        </div>
+                        <p><strong>Detailed Analysis:</strong> By focusing on "Cognitive Ease," we simplified the multi-step signup process from 8 fields to 3, using LocalStorage to save progress. This reduced form abandonment by 65%. We also integrated a WhatsApp support bot that answered common trust-related questions in real-time.</p>
+                        <p><strong>Conclusion:</strong> Design isn't just about looks; it's about reducing friction. For SwiftPay, friction was the #1 enemy of growth. By removing it, we unlocked their true market potential.</p>
+                    </div>
+                    <a href="contact.html?ref=swiftpay" class="btn btn-secondary mt-8">Get a Fintech Quote →</a>
+                </div>
+                <div class="sticky top-32">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800" alt="SwiftPay Mockup" class="rounded-3xl shadow-2xl border-8 border-gray-50">
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-indigo p-6 rounded-xl text-white text-center">
+                            <p class="text-3xl font-bold">1.1s</p>
+                            <p class="text-xs uppercase">Load Speed</p>
+                        </div>
+                        <div class="bg-orange p-6 rounded-xl text-white text-center">
+                            <p class="text-3xl font-bold">4.2%</p>
+                            <p class="text-xs uppercase">Conv. Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 2: HOSPITALITY -->
+            <div id="steakhouse" class="grid md:grid-cols-2 gap-16 items-start">
+                <div class="md:order-2">
+                    <span class="bg-orange text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Hospitality & Dining</span>
+                    <h2 class="text-4xl font-bold text-indigo mb-6">The Grill Room: Dominating Nairobi's Search Map</h2>
+                    <div class="prose prose-indigo text-gray-600 max-w-none space-y-6">
+                        <p><strong>The Challenge:</strong> A premium steakhouse in Westlands was struggling to fill tables during weekdays. Despite having 4.5 stars on TripAdvisor, they were invisible on Google Maps for "best dinner in Westlands" or "steakhouse Nairobi."</p>
+                        <p><strong>The Strategy:</strong> We implemented a "Hyper-Local SEO" strategy. This involved optimizing their Google Business Profile with professional food photography, keyword-rich descriptions, and an automated review acquisition system. We also built a mobile-optimized menu that was indexable by search engines.</p>
+                        <p><strong>Content Strategy:</strong> We produced 12 high-quality blog posts targeting long-tail keywords like "where to take a date in Nairobi" and "best private dining Westlands." This created a massive net to catch hungry searchers.</p>
+                        <div class="bg-light p-8 rounded-2xl border-l-8 border-orange my-8">
+                            <h4 class="text-2xl font-bold text-indigo mb-2">Rank #1 for 15+ Keywords</h4>
+                            <p class="text-gray-500">The Grill Room now appears in the "Map Pack" for all major dining searches in Nairobi, leading to 120+ additional weekly bookings.</p>
+                        </div>
+                        <p><strong>The Result:</strong> Foot traffic increased by 45% on Mondays-Thursdays. Their website became their primary booking engine, reducing their reliance on expensive third-party delivery/booking platforms that took 20% commissions.</p>
+                        <p><strong>Key Takeaway:</strong> For local businesses in Kenya, Google Maps is the most valuable real estate you can own. We helped The Grill Room evict their competitors from that space.</p>
+                    </div>
+                    <a href="contact.html?ref=grill-room" class="btn btn-secondary mt-8">Scale My Local Business →</a>
+                </div>
+                <div class="sticky top-32 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant Interior" class="rounded-3xl shadow-2xl">
+                    <div class="mt-8 p-8 bg-light rounded-2xl">
+                        <h4 class="font-bold text-indigo mb-4">Traffic Growth (6 Months)</h4>
+                        <div class="h-40 flex items-end gap-2">
+                            <div class="bg-gray-200 w-full h-10 rounded-t"></div>
+                            <div class="bg-gray-300 w-full h-16 rounded-t"></div>
+                            <div class="bg-gray-400 w-full h-24 rounded-t"></div>
+                            <div class="bg-orange w-full h-40 rounded-t"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 3: E-COMMERCE -->
+            <div id="bloom" class="grid md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <span class="bg-orange text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">E-commerce Fashion</span>
+                    <h2 class="text-4xl font-bold text-indigo mb-6">Bloom Florals: 10x ROI via Social Commerce</h2>
+                    <div class="prose prose-indigo text-gray-600 max-w-none space-y-6">
+                        <p><strong>The Challenge:</strong> Bloom Florals had a beautiful Instagram following but was struggling to translate "likes" into "orders." Their DM-based ordering system was chaotic, leading to lost leads and inconsistent revenue.</p>
+                        <p><strong>The Strategy:</strong> We built a custom Shopify-powered storefront integrated with M-Pesa STK Push. We replaced the manual DM process with a 1-click "Buy Now on WhatsApp" funnel. We then launched a Facebook Retargeting campaign aimed at people who added items to their cart but didn't finish the payment.</p>
+                        <p><strong>Marketing Stack:</strong> We used the Meta Pixel to track every action. We discovered that 70% of users dropped off at the "Shipping Cost" page. We advised the client to offer "Flat Rate Nairobi Shipping," which immediately boosted checkout completions by 40%.</p>
+                        <div class="bg-light p-8 rounded-2xl border-l-8 border-orange my-8">
+                            <h4 class="text-2xl font-bold text-indigo mb-2">KSh 2.4M Monthly Revenue</h4>
+                            <p class="text-gray-500">From a baseline of KSh 300k, Bloom Florals scaled to over KSh 2.4M in monthly sales within 5 months of our intervention.</p>
+                        </div>
+                        <p><strong>Innovation:</strong> We implemented an "Occasion Reminder" feature. Users could opt-in to receive a WhatsApp reminder 3 days before their anniversary or a loved one's birthday with a pre-filled cart. This created a recurring revenue stream that accounted for 20% of total sales.</p>
+                        <p><strong>Outcome:</strong> Bloom Florals transformed from a small side-hustle into a fully operational business with 5 employees and a dedicated delivery fleet.</p>
+                    </div>
+                    <a href="contact.html?ref=bloom-florals" class="btn btn-secondary mt-8">Build My E-com Empire →</a>
+                </div>
+                <div class="sticky top-32">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="Ecom Store" class="rounded-3xl shadow-2xl">
+                    <div class="mt-8 bg-indigo text-white p-8 rounded-2xl">
+                        <p class="text-xl italic">"Kim Graphics didn't just build a website; they built a business model that works while I sleep. My ROI is literally 10x what I spent on their services."</p>
+                        <p class="mt-4 font-bold">- Sarah O., Founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 4: TRAVEL -->
+            <div id="safari" class="grid md:grid-cols-2 gap-16 items-start">
+                <div class="md:order-2">
+                    <span class="bg-orange text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Travel & Tourism</span>
+                    <h2 class="text-4xl font-bold text-indigo mb-6">Rift Safari Tours: Global SEO for Local Growth</h2>
+                    <div class="prose prose-indigo text-gray-600 max-w-none space-y-6">
+                        <p><strong>The Challenge:</strong> Rift Safari Tours wanted to attract high-value European and American tourists but were being outbid on Google Ads by massive international aggregators with multi-million dollar budgets.</p>
+                        <p><strong>The Strategy:</strong> We focused on "Authority SEO" and "Content Clusters." Instead of trying to rank for "Kenya Safari" (too competitive), we targeted "7-day luxury Masai Mara safari itinerary" and "best time for Great Migration 2025." We produced 25 deep-dive guides (2,000+ words each) that established them as the ultimate experts.</p>
+                        <p><strong>Link Building:</strong> We secured mentions in travel blogs and local news outlets, boosting their domain authority from 12 to 38. We also optimized their site for "Featured Snippets," capturing the top spot on Google for dozens of "how-to" and "best-of" travel queries.</p>
+                        <div class="bg-light p-8 rounded-2xl border-l-8 border-orange my-8">
+                            <h4 class="text-2xl font-bold text-indigo mb-2">85% Organic Lead Growth</h4>
+                            <p class="text-gray-500">Rift Safari Tours now receives over 200 high-quality inquiries per month purely from organic search, saving them KSh 400k/mo in ad costs.</p>
+                        </div>
+                        <p><strong>UX Design:</strong> We redesigned their tour pages to include "Live Availability" and "Expert Video Overviews." Adding a "Chat with a Guide" WhatsApp button increased the lead-to-booking conversion rate by 22%.</p>
+                        <p><strong>The Victory:</strong> They are now a top-3 choice for luxury safaris in Kenya, competing head-to-head with brands 100x their size, all thanks to a smarter digital strategy.</p>
+                    </div>
+                    <a href="contact.html?ref=rift-safari" class="btn btn-secondary mt-8">Scale My Tourism Brand →</a>
+                </div>
+                <div class="sticky top-32 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1516422317940-3db3d6106e4c?w=800" alt="Safari" class="rounded-3xl shadow-2xl">
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-indigo p-6 rounded-xl text-white text-center">
+                            <p class="text-3xl font-bold">15k+</p>
+                            <p class="text-xs uppercase">Monthly Visitors</p>
+                        </div>
+                        <div class="bg-orange p-6 rounded-xl text-white text-center">
+                            <p class="text-3xl font-bold">38</p>
+                            <p class="text-xs uppercase">Domain Authority</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+
+    <!-- STICKY ELEMENTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-indigo text-white pt-20 pb-10 mt-20">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 text-left">
+            <div>
+                <h4 class="text-2xl font-bold mb-6 flex items-center gap-2 text-white">KIM GRAPHICS <span class="text-orange text-lg">♦️</span></h4>
+                <p class="text-gray-400">Kenya's leading growth agency. We build digital assets that work as hard as you do.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Solutions</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="graphic-design.html" class="hover:text-orange transition text-gray-400 no-underline">Logo & Identity</a></li>
+                    <li><a href="web-design.html" class="hover:text-orange transition text-gray-400 no-underline">Custom Web Apps</a></li>
+                    <li><a href="digital-marketing.html" class="hover:text-orange transition text-gray-400 no-underline">Search Engine Optimization</a></li>
+                    <li><a href="portfolio.html" class="hover:text-orange transition text-gray-400 no-underline">Client Success Stories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Company</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="blog.html" class="hover:text-orange transition text-gray-400 no-underline">Latest Growth Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-orange transition text-gray-400 no-underline">Contact Support</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-orange transition text-gray-400 no-underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-orange transition text-gray-400 no-underline">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest text-white">Join Our Growth List</h5>
+                <p class="text-xs text-gray-500 mb-4">Get weekly conversion tips delivered to your inbox.</p>
+                <form class="flex">
+                    <input type="email" required placeholder="email@company.com" class="bg-white bg-opacity-10 border border-gray-700 px-4 py-2 rounded-l-md w-full focus:outline-none text-white text-sm">
+                    <button class="bg-orange px-4 py-2 rounded-r-md hover:bg-opacity-90 transition text-white"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p>© 2025 Kim Graphics Company. All Rights Reserved. Kenyan-Owned.</p>
+            <p>123 Riverside Drive, Nairobi, Kenya | +254 715 135 141</p>
+        </div>
+    </footer>
+
+    <!-- STANDARDIZED STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar lg:hidden">
+        <a href="tel:+254715135141" class="no-underline"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/254715135141" class="no-underline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="contact.html" class="no-underline"><i class="fas fa-envelope"></i> Get Quote</a>
+    </div>
+
+    <!-- STANDARDIZED WHATSAPP FLOAT -->
     <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
-       class="whatsapp-float"
+       class="whatsapp-float hidden md:flex"
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- STICKY CONTACT BAR -->
-    <div class="sticky-contact-bar">
-        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
-        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+
+    <!-- STANDARDIZED SLIDE-IN CTA -->
+    <div class="slide-in-cta">
+        <button class="close-cta absolute top-2 right-2 text-gray-400 hover:text-indigo">&times;</button>
+        <p class="font-bold text-indigo mb-2 text-lg">Need a design today?</p>
+        <p class="text-sm text-gray-500 mb-4">Our Nairobi team is online and ready to chat about your project.</p>
+        <a href="https://wa.me/254715135141" class="btn btn-secondary w-full text-xs py-2">Chat with an Expert</a>
     </div>
-    <!-- STICKY BOTTOM-LEFT CTA -->
-    <div id="sticky-bottom-left">
-        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
-        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
-    </div>
-    <!-- EXIT POPUP -->
-    <div id="exit-popup">
-        <div class="popup-content">
-            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
-            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
-            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+
+    <!-- STANDARDIZED EXIT POPUP -->
+    <div id="exit-popup" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="w-20 h-20 bg-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-3xl">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-indigo">Wait! Don't Leave Empty Handed</h2>
+            <p class="text-gray-600 mb-8">Get <span class="text-orange font-bold">10% OFF</span> your first project and our "Nairobi Growth Guide" instantly.</p>
             <form class="space-y-4">
-                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
-                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+                <input type="email" required placeholder="Your Business Email" class="w-full px-4 py-3 border rounded-lg focus:outline-orange">
+                <button type="submit" class="btn btn-secondary w-full py-4 text-lg">Send My Discount Code</button>
             </form>
-            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+            <p class="text-xs text-gray-400 mt-6 italic">Join 1,000+ business owners scaling with Kim Graphics.</p>
         </div>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

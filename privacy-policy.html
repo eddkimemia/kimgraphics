@@ -4,57 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Kim Graphics Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { font-family: 'Poppins', sans-serif; }</style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 py-20">
-    <!-- 1. COUNTDOWN BANNER -->
-    <div class="countdown-banner sticky top-0 z-[60]">
+<body class="bg-light">
+    <!-- STANDARDIZED COUNTDOWN BANNER -->
+    <div class="promo-banner">
         Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <div class="max-w-3xl mx-auto px-6 bg-white p-12 rounded-xl shadow-md">
-        <a href="index.html" class="text-orange-500 font-bold mb-8 inline-block">← Back Home</a>
-        <h1 class="text-3xl font-bold mb-6">Privacy Policy</h1>
-        <p class="mb-4">At Kim Graphics Company, we respect your privacy. This policy outlines how we handle your personal data.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">1. Data Collection</h2>
-        <p class="mb-4">We collect information provided via lead forms, such as name, email, and project details, to provide our services.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">2. Cookies</h2>
-        <p class="mb-4">We use cookies to improve user experience and track site analytics.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">3. Security</h2>
-        <p class="mb-4">We implement industry-standard security measures to protect your data.</p>
+    <!-- STANDARDIZED STICKY HEADER -->
+    <header class="bg-indigo text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2 text-white no-underline">
+                KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
+            </a>
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Marketing</a>
+                <a href="portfolio.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Portfolio</a>
+                <a href="blog.html" class="hover:text-orange transition text-sm font-semibold text-white no-underline">Blog</a>
+                <a href="contact.html" class="btn btn-secondary text-sm">Free Quote →</a>
+            </nav>
+            <button data-menu-toggle class="lg:hidden text-2xl text-white focus:outline-none"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav data-mobile-menu class="hidden lg:hidden bg-indigo border-t border-gray-700 px-4 py-6 space-y-4">
+            <a href="graphic-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Graphic Design</a>
+            <a href="web-design.html" class="block hover:text-orange transition font-semibold text-white no-underline">Web Design</a>
+            <a href="digital-marketing.html" class="block hover:text-orange transition font-semibold text-white no-underline">Marketing</a>
+            <a href="portfolio.html" class="block hover:text-orange transition font-semibold text-white no-underline">Portfolio</a>
+            <a href="blog.html" class="block hover:text-orange transition font-semibold text-white no-underline">Blog</a>
+            <a href="contact.html" class="btn btn-secondary w-full">Free Quote →</a>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <main class="py-16">
+        <div class="container mx-auto px-4 max-w-3xl bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-3xl font-bold mb-8 text-indigo border-b pb-4">Privacy Policy</h1>
+            <div class="space-y-6 text-gray-600">
+                <p>Last updated: June 08, 2024</p>
+                <p>At Kim Graphics Company, we respect your privacy and are committed to protecting it. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+
+                <h2 class="text-xl font-bold text-indigo">1. Information We Collect</h2>
+                <p>We collect information that you voluntarily provide to us when you fill out a lead form, subscribe to our newsletter, or contact us via WhatsApp. This may include your name, email address, phone number, and business details.</p>
+
+                <h2 class="text-xl font-bold text-indigo">2. How We Use Your Information</h2>
+                <p>We use the information we collect to respond to your inquiries, provide the requested services, send you custom proposals, and (if you opted in) send you marketing insights.</p>
+
+                <h2 class="text-xl font-bold text-indigo">3. Information Sharing</h2>
+                <p>We do not sell, rent, or trade your personal information to third parties. We may share information with service providers who assist us in operating our website or conducting our business, provided those parties agree to keep this information confidential.</p>
+
+                <h2 class="text-xl font-bold text-indigo">4. Kenyan Law</h2>
+                <p>This policy is designed to comply with the Data Protection Act of Kenya. You have the right to request access to the personal data we hold about you or ask for its deletion.</p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-indigo text-white pt-20 pb-10 mt-20">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 text-left">
+            <div>
+                <h4 class="text-2xl font-bold mb-6 flex items-center gap-2 text-white">KIM GRAPHICS <span class="text-orange text-lg">♦️</span></h4>
+                <p class="text-gray-400">Kenya's leading growth agency. We build digital assets that work as hard as you do.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl text-gray-400 hover:text-orange"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Solutions</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="graphic-design.html" class="hover:text-orange transition text-gray-400 no-underline">Logo & Identity</a></li>
+                    <li><a href="web-design.html" class="hover:text-orange transition text-gray-400 no-underline">Custom Web Apps</a></li>
+                    <li><a href="digital-marketing.html" class="hover:text-orange transition text-gray-400 no-underline">Search Engine Optimization</a></li>
+                    <li><a href="portfolio.html" class="hover:text-orange transition text-gray-400 no-underline">Client Success Stories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest">Company</h5>
+                <ul class="space-y-4 text-gray-400 text-sm list-none p-0">
+                    <li><a href="blog.html" class="hover:text-orange transition text-gray-400 no-underline">Latest Growth Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-orange transition text-gray-400 no-underline">Contact Support</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-orange transition text-gray-400 no-underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-orange transition text-gray-400 no-underline">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 uppercase text-orange text-sm tracking-widest text-white">Join Our Growth List</h5>
+                <p class="text-xs text-gray-500 mb-4">Get weekly conversion tips delivered to your inbox.</p>
+                <form class="flex">
+                    <input type="email" required placeholder="email@company.com" class="bg-white bg-opacity-10 border border-gray-700 px-4 py-2 rounded-l-md w-full focus:outline-none text-white text-sm">
+                    <button class="bg-orange px-4 py-2 rounded-r-md hover:bg-opacity-90 transition text-white"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p>© 2025 Kim Graphics Company. All Rights Reserved. Kenyan-Owned.</p>
+            <p>123 Riverside Drive, Nairobi, Kenya | +254 715 135 141</p>
+        </div>
+    </footer>
+
+    <!-- STANDARDIZED STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar lg:hidden">
+        <a href="tel:+254715135141" class="no-underline"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/254715135141" class="no-underline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="contact.html" class="no-underline"><i class="fas fa-envelope"></i> Get Quote</a>
     </div>
 
-    <!-- STICKY WHATSAPP -->
+    <!-- STANDARDIZED WHATSAPP FLOAT -->
     <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
-       class="whatsapp-float"
+       class="whatsapp-float hidden md:flex"
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- STICKY CONTACT BAR -->
-    <div class="sticky-contact-bar">
-        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
-        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+
+    <!-- STANDARDIZED SLIDE-IN CTA -->
+    <div class="slide-in-cta">
+        <button class="close-cta absolute top-2 right-2 text-gray-400 hover:text-indigo">&times;</button>
+        <p class="font-bold text-indigo mb-2 text-lg">Need a design today?</p>
+        <p class="text-sm text-gray-500 mb-4">Our Nairobi team is online and ready to chat about your project.</p>
+        <a href="https://wa.me/254715135141" class="btn btn-secondary w-full text-xs py-2">Chat with an Expert</a>
     </div>
-    <!-- STICKY BOTTOM-LEFT CTA -->
-    <div id="sticky-bottom-left">
-        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
-        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
-    </div>
-    <!-- EXIT POPUP -->
-    <div id="exit-popup">
-        <div class="popup-content">
-            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
-            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
-            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+
+    <!-- STANDARDIZED EXIT POPUP -->
+    <div id="exit-popup" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="w-20 h-20 bg-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-3xl">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-indigo">Wait! Don't Leave Empty Handed</h2>
+            <p class="text-gray-600 mb-8">Get <span class="text-orange font-bold">10% OFF</span> your first project and our "Nairobi Growth Guide" instantly.</p>
             <form class="space-y-4">
-                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
-                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+                <input type="email" required placeholder="Your Business Email" class="w-full px-4 py-3 border rounded-lg focus:outline-orange">
+                <button type="submit" class="btn btn-secondary w-full py-4 text-lg">Send My Discount Code</button>
             </form>
-            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+            <p class="text-xs text-gray-400 mt-6 italic">Join 1,000+ business owners scaling with Kim Graphics.</p>
         </div>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
