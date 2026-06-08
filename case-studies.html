@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Kim Graphics Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Case Studies | Proof of Results | Kim Graphics Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { font-family: 'Poppins', sans-serif; }</style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 py-20">
+<body class="bg-white">
     <!-- 1. COUNTDOWN BANNER -->
     <div class="countdown-banner sticky top-0 z-[60]">
         Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <div class="max-w-3xl mx-auto px-6 bg-white p-12 rounded-xl shadow-md">
-        <a href="index.html" class="text-orange-500 font-bold mb-8 inline-block">← Back Home</a>
-        <h1 class="text-3xl font-bold mb-6">Privacy Policy</h1>
-        <p class="mb-4">At Kim Graphics Company, we respect your privacy. This policy outlines how we handle your personal data.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">1. Data Collection</h2>
-        <p class="mb-4">We collect information provided via lead forms, such as name, email, and project details, to provide our services.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">2. Cookies</h2>
-        <p class="mb-4">We use cookies to improve user experience and track site analytics.</p>
-        <h2 class="text-xl font-bold mt-8 mb-4">3. Security</h2>
-        <p class="mb-4">We implement industry-standard security measures to protect your data.</p>
-    </div>
+    <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center gap-2">KIM GRAPHICS <span class="text-orange text-xl">♦️</span></a>
+            <nav class="hidden lg:flex space-x-6">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm">Marketing</a>
+                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- STICKY WHATSAPP -->
+    <section class="section-padding bg-indigo text-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Proven Results for <span class="text-orange">Ambitious Brands.</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">We don't just make things look good; we make them perform. Explore our success stories.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container mx-auto px-4 space-y-24">
+
+        <!-- STICKY WHATSAPP -->
     <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
        class="whatsapp-float"
        target="_blank">
@@ -56,5 +70,6 @@
             <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

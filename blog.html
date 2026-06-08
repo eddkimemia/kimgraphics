@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Design & Marketing Insights | Kim Graphics Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+    <!-- 1. COUNTDOWN BANNER -->
+    <div class="countdown-banner sticky top-0 z-[60]">
+        Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
+    </div>
+
+    <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center gap-2">KIM GRAPHICS <span class="text-orange text-xl">♦️</span></a>
+            <nav class="hidden lg:flex space-x-6">
+                <a href="graphic-design.html" class="hover:text-orange transition text-sm">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm">Marketing</a>
+                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding bg-indigo text-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Insights That <span class="text-orange">Grow Your Business</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Expert design and marketing tips for the Kenyan market.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-3 gap-12">
+
+                <!-- BLOG FEED -->
+                <div class="lg:col-span-2 space-y-10">
+                    <!-- Search -->
+                    <div class="mb-10">
+                        <input type="text" id="blog-search" placeholder="Search insights..." class="w-full p-4 rounded-xl border-2 border-gray-200 outline-none focus:border-orange shadow-sm">
+                    </div>
+
+                    <div id="blog-grid" class="grid md:grid-cols-2 gap-8">
+                        <!-- Post 1 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Logo Design" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Graphic Design</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">10 Logo Design Trends in Kenya for 2025</h3>
+                                <p class="text-gray-500 text-sm mb-4">Discover how local culture is shaping the next decade of Kenyan branding...</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">June 2024 • 5 min read</span>
+                                    <a href="blog-post-1.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 2 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Mobile Web" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Web Design</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">Why Your SME Needs a Mobile-First Website in 2026</h3>
+                                <p class="text-gray-500 text-sm mb-4">90% of your Kenyan customers are on mobile. If your site is slow, you're losing money.</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">June 2024 • 6 min read</span>
+                                    <a href="blog-post-2.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 3 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="SEO vs Ads" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Marketing</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">SEO vs Google Ads: Which Gives Better ROI in Nairobi?</h3>
+                                <p class="text-gray-500 text-sm mb-4">A complete cost-per-lead breakdown for local service providers.</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">May 2024 • 8 min read</span>
+                                    <a href="blog-post-3.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 4 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" alt="Social Growth" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Case Study</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">How We Increased a Local Client's Sales by 340%</h3>
+                                <p class="text-gray-500 text-sm mb-4">The exact social media strategy we used to scale a Nairobi boutique.</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">May 2024 • 10 min read</span>
+                                    <a href="blog-post-4.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 5 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Cheap Design" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Strategy</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">The Hidden Costs of Cheap Web Design</h3>
+                                <p class="text-gray-500 text-sm mb-4">Why that KSh 10,000 website might be the most expensive mistake you make.</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">April 2024 • 7 min read</span>
+                                    <a href="blog-post-5.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post 6 -->
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=600&q=80" alt="Design Mistakes" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-orange uppercase tracking-widest">Conversion</span>
+                                <h3 class="text-xl font-bold mt-2 mb-3">5 Graphic Design Mistakes That Kill Conversions</h3>
+                                <p class="text-gray-500 text-sm mb-4">Small errors in your visuals that are driving your customers away.</p>
+                                <div class="flex justify-between items-center mt-6 pt-6 border-t border-gray-100">
+                                    <span class="text-xs text-gray-400">March 2024 • 5 min read</span>
+                                    <a href="blog-post-6.html" class="text-indigo font-bold text-sm">Read Post →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="space-y-10">
+                    <!-- Newsletter -->
+                    <div class="bg-indigo text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-bold mb-4 text-orange">Grow Your Business</h3>
+                        <p class="text-gray-300 text-sm mb-6">Get weekly design and marketing tips delivered to your inbox.</p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Email Address" required class="w-full p-3 rounded text-indigo outline-none">
+                            <button type="submit" class="cta-button w-full">Join 1,200+ Readers</button>
+                        </form>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md">
+                        <h3 class="text-xl font-bold mb-6 text-indigo border-b-2 border-orange inline-block">Categories</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="flex justify-between text-gray-600 hover:text-orange"><span>Graphic Design</span> <span>(12)</span></a></li>
+                            <li><a href="#" class="flex justify-between text-gray-600 hover:text-orange"><span>Web Design</span> <span>(8)</span></a></li>
+                            <li><a href="#" class="flex justify-between text-gray-600 hover:text-orange"><span>Marketing</span> <span>(15)</span></a></li>
+                            <li><a href="#" class="flex justify-between text-gray-600 hover:text-orange"><span>Case Studies</span> <span>(5)</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-indigo text-white py-12 text-center">
+        <p class="text-gray-400">© 2025 Kim Graphics Company. Nairobi, Kenya.</p>
+    </footer>
+
+        <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
+       class="whatsapp-float"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- STICKY CONTACT BAR -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
+    </div>
+    <!-- STICKY BOTTOM-LEFT CTA -->
+    <div id="sticky-bottom-left">
+        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
+        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
+    </div>
+    <!-- EXIT POPUP -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
+            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+            <form class="space-y-4">
+                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

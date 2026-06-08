@@ -3,226 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Graphic Design | Kim Graphics Company</title>
-    <meta name="description" content="High-end logo design, branding, and print materials designed to stop the scroll and convert visitors into leads.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Premium Graphic Design | Kim Graphics Company">
-    <meta property="og:description" content="Transform your brand with professional graphics that drive results.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&h=630&q=80">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Graphic Design",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Kim Graphics Company"
-      },
-      "description": "Premium logo design, branding, and marketing materials."
-    }
-    </script>
-
+    <title>Graphic Design Services in Kenya | Kim Graphics Company</title>
+    <meta name="description" content="Premium graphic design in Nairobi. Logo design, branding, and print materials designed to convert. Prices starting from KSh 8,000.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        indigo: '#1A1A3A',
-                        orange: '#FF6B35',
-                        light: '#F7F7F7'
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { indigo: '#1A1A3A', orange: '#FF6B35', light: '#F7F7F7' } } } }
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- 1. COUNTDOWN BANNER -->
     <div class="countdown-banner sticky top-0 z-[60]">
-        Free Brand Audit with every Logo Design — Expires in <span id="countdown-timer">24:00:00</span>
+        Free Website Audit + 20% off for Nairobi SMEs — Offer expires in <span id="countdown-timer">24:00:00</span>
     </div>
 
-    <!-- 2. HEADER -->
     <header class="bg-indigo text-white sticky top-[44px] z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tight">KIM <span class="text-orange">GRAPHICS</span></a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="graphic-design.html" class="text-orange font-bold">Graphic Design</a>
-                <a href="web-design.html" class="hover:text-orange transition">Web Design</a>
-                <a href="digital-marketing.html" class="hover:text-orange transition">Marketing</a>
-                <a href="portfolio.html" class="hover:text-orange transition">Portfolio</a>
-                <a href="contact.html" class="cta-button">Free Quote →</a>
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                KIM GRAPHICS <span class="text-orange text-xl">♦️</span>
+            </a>
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="graphic-design.html" class="text-orange font-bold text-sm">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition text-sm">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition text-sm">Marketing</a>
+                <a href="contact.html" class="cta-button text-sm">Free Quote →</a>
             </nav>
-            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION -->
-    <section class="bg-indigo text-white py-20 relative overflow-hidden">
-        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Graphics That <br><span class="text-orange">Stop the Scroll.</span></h1>
-                <p class="text-xl text-gray-300 mb-8">Stand out from the noise with visuals designed to capture attention and convert curiosity into sales.</p>
-                <div class="flex gap-4">
-                    <a href="#quote" class="cta-button">Get My Design Quote</a>
-                    <a href="portfolio.html" class="border-2 border-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-indigo transition">See Portfolio</a>
-                </div>
-            </div>
-            <div class="relative">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=800&q=80" alt="Graphic designer working" class="rounded-lg shadow-2xl">
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. SERVICES LIST -->
-    <section class="section-padding bg-white">
+    <section class="bg-indigo text-white py-20">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Visual Solutions for Every Channel</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="p-6 bg-light rounded-lg">
-                    <i class="fas fa-pen-nib text-4xl text-orange mb-4"></i>
-                    <h3 class="font-bold">Logo & Branding</h3>
-                </div>
-                <div class="p-6 bg-light rounded-lg">
-                    <i class="fas fa-share-alt text-4xl text-orange mb-4"></i>
-                    <h3 class="font-bold">Social Graphics</h3>
-                </div>
-                <div class="p-6 bg-light rounded-lg">
-                    <i class="fas fa-file-invoice text-4xl text-orange mb-4"></i>
-                    <h3 class="font-bold">Print & Brochure</h3>
-                </div>
-                <div class="p-6 bg-light rounded-lg">
-                    <i class="fas fa-ad text-4xl text-orange mb-4"></i>
-                    <h3 class="font-bold">Ad Creative</h3>
-                </div>
-            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Graphics That <span class="text-orange">Stop the Scroll.</span></h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Stand out in the Kenyan market with visuals designed to capture attention and drive sales.</p>
+            <a href="#packages" class="cta-button">View Packages (KSh)</a>
         </div>
     </section>
 
-    <!-- 5. BEFORE/AFTER SLIDER (MOCKUP) -->
-    <section class="section-padding bg-indigo text-white">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-6">The Power of Professional Design</h2>
-            <p class="text-gray-300 mb-12">See how we transformed "Old Brand" into a market-ready premium identity.</p>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="relative">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Before" class="rounded-lg opacity-50 grayscale">
-                    <span class="absolute top-4 left-4 bg-red-500 px-3 py-1 rounded text-xs font-bold">BEFORE</span>
-                </div>
-                <div class="relative">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="After" class="rounded-lg">
-                    <span class="absolute top-4 left-4 bg-green-500 px-3 py-1 rounded text-xs font-bold">AFTER</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. PACKAGES TABLE -->
-    <section class="section-padding bg-light">
+    <section id="packages" class="section-padding bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Design Packages</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full bg-white rounded-xl shadow-lg">
-                    <thead class="bg-indigo text-white">
-                        <tr>
-                            <th class="p-6 text-left">Features</th>
-                            <th class="p-6 text-center">Essential</th>
-                            <th class="p-6 text-center bg-orange">Premium Brand</th>
-                            <th class="p-6 text-center">Elite Suite</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y">
-                        <tr>
-                            <td class="p-6 font-bold">Logo Concepts</td>
-                            <td class="p-6 text-center">2</td>
-                            <td class="p-6 text-center">5</td>
-                            <td class="p-6 text-center">10+</td>
-                        </tr>
-                        <tr>
-                            <td class="p-6 font-bold">Brand Style Guide</td>
-                            <td class="p-6 text-center"><i class="fas fa-times text-red-500"></i></td>
-                            <td class="p-6 text-center"><i class="fas fa-check text-green-500"></i></td>
-                            <td class="p-6 text-center"><i class="fas fa-check text-green-500"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-6 font-bold">Social Media Kit</td>
-                            <td class="p-6 text-center"><i class="fas fa-times text-red-500"></i></td>
-                            <td class="p-6 text-center"><i class="fas fa-check text-green-500"></i></td>
-                            <td class="p-6 text-center"><i class="fas fa-check text-green-500"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-6 font-bold">Turnaround Time</td>
-                            <td class="p-6 text-center">5 Days</td>
-                            <td class="p-6 text-center">3 Days</td>
-                            <td class="p-6 text-center text-orange font-bold">VIP (24hr)</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td class="p-6 text-center"><a href="contact.html?service=Essential" class="text-indigo font-bold underline">Get Quote</a></td>
-                            <td class="p-6 text-center"><a href="contact.html?service=Premium" class="bg-orange text-white px-4 py-2 rounded font-bold">Get Quote</a></td>
-                            <td class="p-6 text-center"><a href="contact.html?service=Elite" class="text-indigo font-bold underline">Get Quote</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2 class="text-3xl font-bold text-center mb-12">Flexible Design Packages</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border rounded-xl hover:border-orange transition">
+                    <h3 class="text-xl font-bold mb-2">Essential Logo</h3>
+                    <p class="text-gray-500 mb-6">For startups and SMEs</p>
+                    <div class="text-3xl font-bold text-indigo mb-6">KSh 15,000</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li><i class="fas fa-check text-orange mr-2"></i> 2 Logo Concepts</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> 3 Revisions</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> Print & Web Files</li>
+                    </ul>
+                    <a href="contact.html?service=essential-logo" class="block text-center py-3 border-2 border-indigo rounded font-bold hover:bg-indigo hover:text-white transition">Request Quote</a>
+                </div>
+                <div class="p-8 border-2 border-orange rounded-xl shadow-xl relative bg-white">
+                    <span class="absolute top-0 right-8 -translate-y-1/2 bg-orange text-white text-xs font-bold px-4 py-1 rounded-full">POPULAR</span>
+                    <h3 class="text-xl font-bold mb-2">Premium Brand</h3>
+                    <p class="text-gray-500 mb-6">Complete identity system</p>
+                    <div class="text-3xl font-bold text-indigo mb-6">KSh 45,000</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li><i class="fas fa-check text-orange mr-2"></i> 5 Logo Concepts</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> Style Guide</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> Social Media Kit</li>
+                    </ul>
+                    <a href="contact.html?service=premium-brand" class="cta-button w-full block">Request Quote</a>
+                </div>
+                <div class="p-8 border rounded-xl hover:border-orange transition">
+                    <h3 class="text-xl font-bold mb-2">Elite Suite</h3>
+                    <p class="text-gray-500 mb-6">Scale your business</p>
+                    <div class="text-3xl font-bold text-indigo mb-6">Custom</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li><i class="fas fa-check text-orange mr-2"></i> Full Branding</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> Marketing Collateral</li>
+                        <li><i class="fas fa-check text-orange mr-2"></i> Priority Support</li>
+                    </ul>
+                    <a href="contact.html?service=elite-suite" class="block text-center py-3 border-2 border-indigo rounded font-bold hover:bg-indigo hover:text-white transition">Request Custom Quote</a>
+                </div>
             </div>
+            <p class="text-center text-xs text-gray-400 mt-12">*All prices exclude 16% VAT (if applicable)</p>
         </div>
     </section>
 
-    <!-- 7. DESIGN SAMPLES (6 high-res samples) -->
-    <section class="section-padding bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Latest Designs</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <a href="contact.html?interest=logo" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=400&q=80" alt="Logo Sample 1" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Similar Logo</div>
-                </a>
-                <a href="contact.html?interest=branding" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=400&q=80" alt="Branding Sample 2" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Similar Branding</div>
-                </a>
-                <a href="contact.html?interest=print" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1541462608141-ad4d4f9d3f0a?auto=format&fit=crop&w=400&q=80" alt="Print Sample 3" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Similar Print</div>
-                </a>
-                <a href="contact.html?interest=social" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=400&q=80" alt="Social Media Sample 4" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Social Graphics</div>
-                </a>
-                <a href="contact.html?interest=packaging" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80" alt="Packaging Sample 5" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Packaging Design</div>
-                </a>
-                <a href="contact.html?interest=illustration" class="group relative overflow-hidden rounded-lg">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80" alt="Illustration Sample 6" class="w-full h-64 object-cover group-hover:scale-110 transition">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white font-bold text-center px-4">Request Illustration</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FOOTER & STICKY ELEMENTS (Shared) -->
-    <footer class="bg-indigo text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Ready to transform your brand?</h2>
-            <a href="contact.html" class="cta-button text-lg">Get Your Free Consultation Now</a>
-        </div>
-    </footer>
-
+        <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/254715135141?text=Hi%20Kim%20Graphics,%20I'm%20interested%20in%20your%20services."
+       class="whatsapp-float"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- STICKY CONTACT BAR -->
-    <div class="sticky-contact-bar hidden md:flex">
-        <a href="tel:+1234567890" class="contact-icon"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/1234567890" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+    <div class="sticky-contact-bar">
+        <a href="tel:+254715135141"><i class="fas fa-phone"></i><span>Call</span></a>
+        <a href="https://wa.me/254715135141"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="mailto:hello@kimgraphics.co.ke"><i class="fas fa-envelope"></i><span>Email</span></a>
     </div>
-
+    <!-- STICKY BOTTOM-LEFT CTA -->
+    <div id="sticky-bottom-left">
+        <p class="font-bold text-sm mb-2">Ready to grow your brand?</p>
+        <a href="contact.html" class="bg-orange text-white px-4 py-2 rounded text-xs font-bold block text-center">Book a Free 15-min Call</a>
+    </div>
+    <!-- EXIT POPUP -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Wait! Your Website Might Be Losing Money</h2>
+            <p class="text-lg text-gray-600 mb-6">Download our <span class="text-orange font-bold">FREE 'Website Conversion Checklist'</span> and find out how to double your leads today.</p>
+            <form class="space-y-4">
+                <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Send Me My Free PDF</button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Instantly emailed to you. No spam.</p>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

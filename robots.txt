@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kimgraphics.com/sitemap.xml
+Sitemap: https://kimgraphics.co.ke/sitemap.xml
