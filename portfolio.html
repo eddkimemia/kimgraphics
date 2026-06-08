@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kim Graphics Company Success Stories</title>
+    <meta name="description" content="View our portfolio of premium graphic design, web design, and digital marketing projects. See the results we deliver.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio | Kim Graphics Company">
+    <meta property="og:description" content="Explore our work and see how we can help your brand grow.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portfolio",
+      "description": "Gallery of past work in design and marketing.",
+      "publisher": {
+        "@type": "LocalBusiness",
+        "name": "Kim Graphics Company"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: '#1A1A3A',
+                        orange: '#FF6B35',
+                        light: '#F7F7F7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="bg-indigo text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight">KIM <span class="text-orange">GRAPHICS</span></a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="graphic-design.html" class="hover:text-orange transition">Graphic Design</a>
+                <a href="web-design.html" class="hover:text-orange transition">Web Design</a>
+                <a href="digital-marketing.html" class="hover:text-orange transition">Marketing</a>
+                <a href="portfolio.html" class="text-orange font-bold">Portfolio</a>
+                <a href="contact.html" class="cta-button">Free Quote →</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding bg-indigo text-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Work Speaks for Itself</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Browse our recent projects and see the results we've delivered for premium brands worldwide.</p>
+        </div>
+    </section>
+
+    <!-- 1. FILTERABLE GALLERY -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterPortfolio('all', this)" class="filter-btn active px-6 py-2 rounded-full border border-indigo font-bold transition">All Work</button>
+                <button onclick="filterPortfolio('graphic', this)" class="filter-btn px-6 py-2 rounded-full border border-indigo font-bold transition">Graphic Design</button>
+                <button onclick="filterPortfolio('web', this)" class="filter-btn px-6 py-2 rounded-full border border-indigo font-bold transition">Web Design</button>
+                <button onclick="filterPortfolio('marketing', this)" class="filter-btn px-6 py-2 rounded-full border border-indigo font-bold transition">Digital Marketing</button>
+            </div>
+
+            <div id="portfolio-grid" class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item group" data-category="graphic">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Branding Project" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-indigo bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Modern Identity</h3>
+                                <p class="text-orange text-sm mb-4">Complete branding overhaul for TechFlow.</p>
+                                <button onclick="document.getElementById('exit-popup').style.display='flex'" class="text-white border border-white px-4 py-2 rounded text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-indigo transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">TechFlow Branding</p>
+                    <a href="contact.html?project=TechFlow" class="text-orange text-sm font-bold">Get similar results →</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item group" data-category="web">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Web Project" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-indigo bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">E-commerce Engine</h3>
+                                <p class="text-orange text-sm mb-4">Built a custom Shopify store for Bloom Inc.</p>
+                                <button onclick="document.getElementById('exit-popup').style.display='flex'" class="text-white border border-white px-4 py-2 rounded text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-indigo transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">Bloom Inc. Store</p>
+                    <a href="contact.html?project=Bloom" class="text-orange text-sm font-bold">Get similar results →</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item group" data-category="marketing">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing Project" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-indigo bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition p-6 text-center">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Lead Gen Blast</h3>
+                                <p class="text-orange text-sm mb-4">Google Ads campaign with 12x ROI.</p>
+                                <button onclick="document.getElementById('exit-popup').style.display='flex'" class="text-white border border-white px-4 py-2 rounded text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-indigo transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">Growth Ad Campaign</p>
+                    <a href="contact.html?project=Growth" class="text-orange text-sm font-bold">Get similar results →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CALL TO ACTION -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Inspired by what you see?</h2>
+            <p class="text-xl text-gray-600 mb-10">We can do the same for your business. Let's discuss your project today.</p>
+            <a href="contact.html" class="cta-button text-xl px-12 py-5">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- 3. EXIT INTENT POPUP (Modified for Portfolio Detail) -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold mb-4">Want Results Like These?</h2>
+            <p class="text-lg text-gray-600 mb-6">Get a <span class="text-orange font-bold">FREE proposal</span> for your custom design or marketing project.</p>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name" required class="w-full px-4 py-3 border rounded-md">
+                <input type="email" placeholder="Email" required class="w-full px-4 py-3 border rounded-md">
+                <button type="submit" class="cta-button w-full">Request Proposal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
